@@ -40,6 +40,20 @@ nodes:
               gateway: ${GATEWAY}
           vip:
             ip: ${VIP}
+    - hostname: k8s-worker-1
+      ipAddress: 192.168.10.121
+      nameservers:
+        - 192.168.10.200
+        - 1.1.1.1
+      installDiskSelector:
+        size: <= 600GB
+      schematic:
+          customization:
+              systemExtensions:
+                  officialExtensions:
+                    - siderolabs/i915
+                    - siderolabs/intel-ucode
+                    - siderolabs/mei
 controlPlane:
     patches:
         - '@./patches/controlplane.yaml'
