@@ -30,6 +30,13 @@ nodes:
         - 8.8.8.8
       installDiskSelector:
         size: <= 1600GB
+      schematic:
+        customization:
+          systemExtensions:
+            officialExtensions:
+              - siderolabs/i915
+              - siderolabs/intel-ucode
+              - siderolabs/mei
       networkInterfaces:
         # suffix is the adapter mac adres.
         - interface: eth0
@@ -40,20 +47,6 @@ nodes:
               gateway: ${GATEWAY}
           vip:
             ip: ${VIP}
-    - hostname: k8s-worker-1
-      ipAddress: ${MASTER1IP_IP}
-      nameservers:
-        - 192.168.10.200
-        - 1.1.1.1
-      installDiskSelector:
-        size: <= 600GB
-      schematic:
-          customization:
-              systemExtensions:
-                  officialExtensions:
-                    - siderolabs/i915
-                    - siderolabs/intel-ucode
-                    - siderolabs/mei
 controlPlane:
     patches:
         - '@./patches/controlplane.yaml'
