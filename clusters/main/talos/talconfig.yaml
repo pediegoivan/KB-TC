@@ -40,15 +40,6 @@ nodes:
               gateway: ${GATEWAY}
           vip:
             ip: ${VIP}
-      schematic:
-        customization:
-          systemExtensions:
-            officialExtensions:
-              - siderolabs/i915
-              - siderolabs/intel-ucode
-              - siderolabs/mei
-      patches:
-        - "@./patches/gpu.yaml"
 controlPlane:
     patches:
         - '@./patches/controlplane.yaml'
