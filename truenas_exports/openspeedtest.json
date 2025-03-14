@@ -1,0 +1,265 @@
+{
+  "catalog": "TRUECHARTS",
+  "catalog_train": "stable",
+  "chart_metadata": {
+    "annotations": {
+      "truecharts.org/category": "utilities",
+      "truecharts.org/max_helm_version": "3.14",
+      "truecharts.org/min_helm_version": "3.11",
+      "truecharts.org/train": "stable"
+    },
+    "apiVersion": "v2",
+    "appVersion": "latest",
+    "dependencies": [
+      {
+        "enabled": true,
+        "name": "common",
+        "repository": "oci://tccr.io/truecharts",
+        "version": "23.0.10"
+      }
+    ],
+    "description": "HTML5 Network Speed Test Server. You can test download \u0026 upload speed from any device within your network with a web browser that is IE10 or new.",
+    "home": "https://truecharts.org/charts/stable/openspeedtest",
+    "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/openspeedtest.webp",
+    "keywords": [
+      "speedtest",
+      "speed test",
+      "openspeedtest"
+    ],
+    "kubeVersion": "\u003e=1.24.0-0",
+    "latest_chart_version": "9.0.9",
+    "maintainers": [
+      {
+        "email": "info@truecharts.org",
+        "name": "TrueCharts",
+        "url": "https://truecharts.org"
+      }
+    ],
+    "name": "openspeedtest",
+    "sources": [
+      "https://github.com/openspeedtest/Speed-Test",
+      "https://github.com/truecharts/charts/tree/master/charts/stable/openspeedtest",
+      "https://hub.docker.com/r/openspeedtest/latest"
+    ],
+    "type": "application",
+    "version": "9.0.9"
+  },
+  "config": {
+    "TZ": "America/New_York",
+    "addons": {
+      "codeserver": {
+        "enabled": false
+      },
+      "netshoot": {
+        "enabled": false
+      },
+      "vpn": {
+        "type": "disabled"
+      }
+    },
+    "credentialsList": [],
+    "deviceList": [],
+    "docs": {
+      "confirmDocs": true
+    },
+    "donateNag": {
+      "confirmDonate": true
+    },
+    "global": {
+      "ixChartContext": {
+        "addNvidiaRuntimeClass": false,
+        "hasNFSCSI": true,
+        "hasSMBCSI": true,
+        "isInstall": false,
+        "isStopped": false,
+        "isUpdate": true,
+        "isUpgrade": false,
+        "kubernetes_config": {
+          "cluster_cidr": "172.16.0.0/16",
+          "cluster_dns_ip": "172.17.0.10",
+          "service_cidr": "172.17.0.0/16"
+        },
+        "nfsProvisioner": "nfs.csi.k8s.io",
+        "nvidiaRuntimeClassName": "nvidia",
+        "operation": "UPDATE",
+        "smbProvisioner": "smb.csi.k8s.io",
+        "storageClassName": "ix-storage-class-openspeedtest",
+        "upgradeMetadata": {}
+      },
+      "stopAll": false
+    },
+    "image": {
+      "pullPolicy": "IfNotPresent",
+      "repository": "openspeedtest/latest",
+      "tag": "latest@sha256:0d2d94087a68cf3f6e2a99b9bcc03c49a8624f144cb670f841bfa3c1570a0eb6"
+    },
+    "imagePullSecretList": [],
+    "ingress": {
+      "main": {
+        "advanced": false,
+        "enabled": true,
+        "hosts": [
+          {
+            "host": "spt.thisidthew4y.com",
+            "paths": [
+              {
+                "path": "/",
+                "pathType": "Prefix"
+              }
+            ]
+          }
+        ],
+        "ingressClassName": "",
+        "integrations": {
+          "certManager": {
+            "certificateIssuer": "thisistheway",
+            "enabled": true
+          },
+          "homepage": {
+            "enabled": false
+          },
+          "traefik": {
+            "allowCors": false,
+            "enabled": true,
+            "entrypoints": [
+              "websecure"
+            ],
+            "middlewares": [
+              {
+                "name": "middleware",
+                "namespace": ""
+              }
+            ]
+          }
+        },
+        "tls": []
+      }
+    },
+    "ingressList": [],
+    "ixCertificateAuthorities": {},
+    "ixCertificates": {},
+    "ixChartContext": {
+      "addNvidiaRuntimeClass": false,
+      "hasNFSCSI": true,
+      "hasSMBCSI": true,
+      "isInstall": false,
+      "isStopped": false,
+      "isUpdate": true,
+      "isUpgrade": false,
+      "kubernetes_config": {
+        "cluster_cidr": "172.16.0.0/16",
+        "cluster_dns_ip": "172.17.0.10",
+        "service_cidr": "172.17.0.0/16"
+      },
+      "nfsProvisioner": "nfs.csi.k8s.io",
+      "nvidiaRuntimeClassName": "nvidia",
+      "operation": "UPDATE",
+      "smbProvisioner": "smb.csi.k8s.io",
+      "storageClassName": "ix-storage-class-openspeedtest",
+      "upgradeMetadata": {}
+    },
+    "ixExternalInterfacesConfiguration": [],
+    "ixExternalInterfacesConfigurationNames": [],
+    "ixVolumes": [],
+    "networkPolicy": [],
+    "persistenceList": [],
+    "podOptions": {
+      "expertPodOpts": false
+    },
+    "portal": {
+      "open": {
+        "enabled": true
+      }
+    },
+    "release_name": "openspeedtest",
+    "resources": {
+      "limits": {
+        "amd.com/gpu": 0,
+        "cpu": "4000m",
+        "gpu.intel.com/i915": 0,
+        "memory": "8Gi",
+        "nvidia.com/gpu": 0
+      },
+      "requests": {
+        "cpu": "10m",
+        "memory": "50Mi"
+      }
+    },
+    "scaleExternalInterface": [],
+    "securityContext": {
+      "container": {
+        "PUID": 568,
+        "UMASK": "0022",
+        "advanced": false,
+        "readOnlyRootFilesystem": false,
+        "runAsGroup": 0,
+        "runAsNonRoot": false,
+        "runAsUser": 0
+      },
+      "pod": {
+        "fsGroup": 568,
+        "fsGroupChangePolicy": "OnRootMismatch",
+        "supplementalGroups": []
+      }
+    },
+    "service": {
+      "main": {
+        "enabled": true,
+        "loadBalancerIP": "",
+        "ports": {
+          "main": {
+            "port": 10256,
+            "protocol": "http",
+            "targetPort": 3000
+          }
+        },
+        "type": "LoadBalancer"
+      }
+    },
+    "serviceList": [],
+    "workload": {
+      "main": {
+        "podSpec": {
+          "containers": {
+            "main": {
+              "advanced": false,
+              "envList": [],
+              "extraArgs": []
+            }
+          }
+        },
+        "replicas": 1,
+        "type": "Deployment"
+      }
+    }
+  },
+  "container_images_update_available": false,
+  "dataset": "HomeNas/ix-applications/releases/openspeedtest",
+  "human_latest_version": "9.0.9",
+  "human_version": "latest_9.0.9",
+  "id": "openspeedtest",
+  "info": {
+    "deleted": "",
+    "description": "Upgrade complete",
+    "first_deployed": "2024-02-17T19:18:33.157670639-05:00",
+    "last_deployed": "2025-03-11T12:43:17.408606606-04:00",
+    "notes": "\n# Thank you for installing openspeedtest by TrueCharts.\n\n\n## Connecting externally\nYou can use this Chart by opening one of the following links in your browser:\n- host: spt.thisidthew4y.com\npath: /\nport: \"443\"\nportalName: open\nprotocol: https\nurl: https://spt.thisidthew4y.com:443/\nuseNodeIP: false\n## Sources for openspeedtest\n- https://github.com/openspeedtest/Speed-Test\n- https://github.com/truecharts/charts/tree/master/charts/stable/openspeedtest\n- https://hub.docker.com/r/openspeedtest/latest\n\nSee more for **openspeedtest** at (https://truecharts.org/charts/stable/openspeedtest)\n\n## Documentation\nPlease check out the TrueCharts documentation on:\nhttps://truecharts.org\n\nOpenSource can only exist with your help, please consider supporting TrueCharts:\nhttps://truecharts.org/sponsor\n",
+    "status": "deployed"
+  },
+  "name": "openspeedtest",
+  "namespace": "ix-openspeedtest",
+  "path": "/mnt/HomeNas/ix-applications/releases/openspeedtest",
+  "pod_status": {
+    "available": 0,
+    "desired": 0
+  },
+  "portals": {
+    "open": [
+      "https://spt.thisidthew4y.com:443/"
+    ]
+  },
+  "status": "STOPPED",
+  "update_available": false,
+  "used_ports": [],
+  "version": 22
+}

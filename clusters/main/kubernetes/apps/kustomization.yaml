@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - kubernetes-dashboard/ks.yaml
+  - openspeedtest/ks.yaml
+  - cloudnative-pg/ks.yaml
+  - jellyfin/ks.yaml
+  - nextcloud/ks.yaml
+  - pgadmin/ks.yaml
+  - prometheus/ks.yaml
+  - prometheus-operator/ks.yaml
+  - qbittorrent/ks.yaml
