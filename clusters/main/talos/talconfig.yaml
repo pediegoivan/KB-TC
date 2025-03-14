@@ -41,7 +41,7 @@ nodes:
           vip:
             ip: ${VIP}
     - hostname: k8s-worker-1
-      ipAddress: 192.168.10.121
+      ipAddress: ${MASTER1IP_IP}
       nameservers:
         - 192.168.10.200
         - 1.1.1.1
