@@ -35,8 +35,8 @@ spec:
             enabled: true
             primary: true
             protocol: http
-            port: 80
-            targetPort: 80
+            port: 8096
+            targetPort: 8096
     defaultSettings:
       # Increase to 3 for a multi-node cluster
       defaultReplicaCount: 1
