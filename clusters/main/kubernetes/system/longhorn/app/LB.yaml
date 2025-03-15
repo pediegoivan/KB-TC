@@ -9,7 +9,6 @@ metadata:
       traefik.ingress.kubernetes.io/router.middlewares: traefik-chain-basic@kubernetescrd
       traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
-  # ... other specifications ...
   selector:
     app: longhorn-frontend
   ports:
