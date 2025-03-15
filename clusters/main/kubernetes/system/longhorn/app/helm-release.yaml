@@ -27,11 +27,11 @@ spec:
     service:
     main:
       type: LoadBalancer
-      loadBalancerIP: ${JELLYFIN_IP}
+      loadBalancerIP: 192.168.0.16
       ports:
         main:
-          port: 8096
-          targetPort: 8096
+          port: 80
+          targetPort: 80
     defaultSettings:
       # Increase to 3 for a multi-node cluster
       defaultReplicaCount: 1
