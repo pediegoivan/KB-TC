@@ -10,8 +10,9 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      port: 80
+      port: 8096
       targetPort: 80
+  ClusterIP: 172.17.1.158
   type: LoadBalancer
   loadBalancerIP: 192.168.0.16
 status:
