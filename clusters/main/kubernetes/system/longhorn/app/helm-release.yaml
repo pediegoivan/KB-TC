@@ -24,6 +24,14 @@ spec:
     remediation:
       retries: 3
   values:
+    service:
+    main:
+      type: LoadBalancer
+      loadBalancerIP: ${JELLYFIN_IP}
+      ports:
+        main:
+          port: 8096
+          targetPort: 8096
     defaultSettings:
       # Increase to 3 for a multi-node cluster
       defaultReplicaCount: 1
