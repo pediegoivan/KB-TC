@@ -9,14 +9,17 @@ metadata:
       traefik.ingress.kubernetes.io/router.middlewares: traefik-chain-basic@kubernetescrd
       traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
-  selector:
-    app: longhorn-frontend
+  defaultBackend:
+    service:
+      name: longhorn-frontend
+        port:
+          number: 80
+  type: LoadBalancer
+  loadBalancerIP: 192.168.0.16
   ports:
     main:
       port: 80
       targetPort: 80
-  type: LoadBalancer
-  loadBalancerIP: 192.168.0.16
 status:
     loadBalancer:
       ingress:
