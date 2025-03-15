@@ -55,4 +55,5 @@ spec:
       # Increase to 3 for a multi-node cluster
       defaultClassReplicaCount: 1
     longhornUI:
+      type: LoadBalancer
       replicas: 1
