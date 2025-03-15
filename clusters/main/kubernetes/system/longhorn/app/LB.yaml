@@ -5,7 +5,8 @@ metadata:
   namespace: longhorn-system
 spec:
   selector:
-    app: longhorn-frontend
+    app.kubernetes.io/name: longhorn-frontend
+    #app: longhorn-frontend
   ports:
     - name: http
       protocol: TCP
