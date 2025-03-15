@@ -40,6 +40,15 @@ nodes:
               gateway: ${GATEWAY}
           vip:
             ip: ${VIP}
+      schematic:
+        customization:
+          systemExtensions:
+            officialExtensions:
+              - siderolabs/i915
+              - siderolabs/intel-ucode
+              - siderolabs/mei
+              - siderolabs/util-linux-tools
+              - siderolabs/iscsi-tools
 controlPlane:
     patches:
         - '@./patches/controlplane.yaml'
@@ -88,10 +97,6 @@ worker:
      - name: nvme_tcp
      - name: vfio_pci
      - name: uio_pci_generic
-    spec:
-      machine:
-        extensions:
-          - name: i915
     schematic:
         customization:
             systemExtensions:
@@ -99,9 +104,6 @@ worker:
                     - siderolabs/util-linux-tools
                     - siderolabs/iscsi-tools
                     - siderolabs/qemu-guest-agent
-                    - siderolabs/i915
-                    - siderolabs/intel-ucode
-                    - siderolabs/mei
     machineFiles:
     - content: |
         [plugins."io.containerd.grpc.v1.cri"]
