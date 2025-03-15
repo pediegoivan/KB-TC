@@ -26,15 +26,10 @@ spec:
   values:
     service:
       main:
-        enabled: true
-        primary: true
         type: LoadBalancer
         loadBalancerIP: 192.168.0.16
         ports:
           main:
-            enabled: true
-            primary: true
-            protocol: http
             port: 8096
             targetPort: 8096
     defaultSettings:
@@ -55,5 +50,4 @@ spec:
       # Increase to 3 for a multi-node cluster
       defaultClassReplicaCount: 1
     longhornUI:
-      type: LoadBalancer
       replicas: 1
