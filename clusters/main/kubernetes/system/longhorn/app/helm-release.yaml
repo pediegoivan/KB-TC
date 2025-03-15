@@ -25,13 +25,13 @@ spec:
       retries: 3
   values:
     service:
-    main:
-      type: LoadBalancer
-      loadBalancerIP: 192.168.0.16
-      ports:
-        main:
-          port: 80
-          targetPort: 80
+      main:
+        type: LoadBalancer
+        loadBalancerIP: 192.168.0.16
+        ports:
+          main:
+            port: 80
+            targetPort: 80
     defaultSettings:
       # Increase to 3 for a multi-node cluster
       defaultReplicaCount: 1
