@@ -19,15 +19,20 @@ spec:
     maxHistory: 3
     install:
         createNamespace: true
+        crds: CreateReplace
         remediation:
             retries: 3
     upgrade:
+        crds:CreateReplace
         cleanupOnFail: true
         remediation:
             retries: 3
     uninstall:
       keepHistory: false
     values:
+      portal:
+        open:
+          enabled: true
       global:
         stopAll: false
       jellyfin:
@@ -60,12 +65,6 @@ spec:
           server: ${TRUENAS_IP}
           path: ${MEDIA_SHARE}
           mountPath: /Media
-      portal:
-        open:
-          enabled: true
-      securityContext:
-        container:
-          readOnlyRootFilesystem: false
       workload:
         main:
           podSpec:
@@ -73,53 +72,5 @@ spec:
               main:
                 env:
                   JELLYFIN_PublishedServerUrl: "{{ $.Values.chartContext.appUrl }}"
-        broadcastproxy:
-          enabled: false
-          type: DaemonSet
-          podSpec:
-            hostNetwork: true
-            # Proxy doesn't seem to respect the TERM signal, so by default
-            # this ends up just hanging until the default grace period ends.
-            # This is unnecesary since this workload only proxies autodiscovery
-            # messages.
-            terminationGracePeriodSeconds: 3
-            containers:
-              broadcastproxy:
-                enabled: true
-                primary: true
-                imageSelector: broadcastProxyImage
-                securityContext:
-                  readOnlyRootFilesystem: true
-                command: ["/bin/sh"]
-                # Quite a lot going on here:
-                # - Resolve Jellyfin's autodiscovery service IP from its FQDN via getent hosts
-                # - Export the IP to `$TARGET_IP`
-                # - Check `$TARGET_IP` is not empty (so we can crash if it is - will help to detect templating errors)
-                # - Touch `/tmp/healty` to use with the readiness, liveness and startup probes
-                # - Start socat in proxy mode
-                # - On exit remove `/tmp/healthy`
-                args:
-                  - "-c"
-                  - 'export TARGET_IP=$(getent hosts ''{{ printf "%v-autodiscovery" (include "tc.v1.common.lib.chart.names.fullname" $) }}'' | awk ''{ print $1 }'') && [[ ! -z $TARGET_IP ]] && touch /tmp/healthy && socat UDP4-LISTEN:7359,fork,reuseaddr,rcvbuf=8096 UDP4-SENDTO:${TARGET_IP}:7359,rcvbuf=8096 ; rm -rf /tmp/healthy'
-                probes:
-                  readiness:
-                    enabled: true
-                    type: exec
-                    command:
-                      - cat
-                      - /tmp/healthy
-                  liveness:
-                    enabled: true
-                    type: exec
-                    command:
-                      - cat
-                      - /tmp/healthy
-                  startup:
-                    enabled: true
-                    type: exec
-                    command:
-                      - cat
-                      - /tmp/healthy
       autodiscovery:
-        enabled: false
-      updated: true
+        enabled: true
