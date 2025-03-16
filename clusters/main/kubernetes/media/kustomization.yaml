@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - jellyfin/ks.yaml
-  #- pvc.yaml
+  - pvc.yaml
   #- prowlarr/ks.yaml
   #- qbittorrent/ks.yaml
