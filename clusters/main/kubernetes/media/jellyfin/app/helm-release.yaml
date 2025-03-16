@@ -61,9 +61,7 @@ spec:
           mountPath: /config/transcode
         media:
           enabled: true
-          type: nfs
-          server: ${TRUENAS_IP}
-          path: ${MEDIA_SHARE}
+          existingClaim: media-nfs-pvc
           mountPath: /Media
       workload:
         main:
