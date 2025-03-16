@@ -58,7 +58,7 @@ spec:
           enabled: true
           type: nfs
           server: 192.168.0.2
-          path: /mnt/HomeNas/SMBShare
+          path: /mnt/HomeNas/SMBShare/
           mountPath: /mnt/Media
       portal:
         open:
