@@ -48,7 +48,7 @@ spec:
               port: 8096
               targetPort: 8096
       persistance:
-        media:
+        config:
           enabled: true
           existingClaim: media-nfs-pvc
           mountPath: /Media
