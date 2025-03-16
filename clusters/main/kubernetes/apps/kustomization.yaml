@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - kubernetes-dashboard/ks.yaml
   - openspeedtest/ks.yaml
-  - media/jellyfin/ks.yaml
