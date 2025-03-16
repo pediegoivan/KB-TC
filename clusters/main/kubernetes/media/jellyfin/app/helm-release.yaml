@@ -15,7 +15,6 @@ spec:
                 name: truecharts
                 namespace: flux-system
             interval: 5m
-    timeout: 20m
     maxHistory: 3
     install:
         createNamespace: true
@@ -29,16 +28,17 @@ spec:
             retries: 3
     uninstall:
       keepHistory: false
+    timeout: 20m
     values:
       portal:
         open:
-          enabled: true
+          enabled: false
       global:
         stopAll: false
-      jellyfin:
-        serverIP: ${JELLYFIN_IP}
-        disableGDM: true
-        requireHTTPS: false
+      #jellyfin:
+        #serverIP: ${JELLYFIN_IP}
+        #disableGDM: true
+        #requireHTTPS: false
       service:
         main:
           type: LoadBalancer
@@ -48,17 +48,6 @@ spec:
               port: 8096
               targetPort: 8096
       persistance:
-        config:
-          enabled: true
-          mountPath: "/config"
-        cache:
-          enabled: true
-          mountPath: "/cache"
-          type: "emptyDir"
-        transcode:
-          enabled: true
-          type: emptyDir
-          mountPath: /config/transcode
         media:
           enabled: true
           existingClaim: media-nfs-pvc
