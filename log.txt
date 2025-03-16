@@ -1,0 +1,743 @@
+LAST SEEN   TYPE      REASON              OBJECT                                               MESSAGE
+83m         Normal    LeaderElection      lease/cert-manager-cainjector-leader-election        cert-manager-certmanager-cainjector-7cdf488b77-kkdnw_c9b1197f-89a5-44db-a3b1-73c210d1ea00 became leader
+12m         Normal    LeaderElection      lease/cert-manager-cainjector-leader-election        cert-manager-certmanager-cainjector-7cdf488b77-j6cd7_f6fd6270-a4f7-4846-9358-52b53ff29f7f became leader
+83m         Normal    LeaderElection      lease/cert-manager-controller                        cert-manager-certmanager-6bbc5655b6-qbmdb-external-cert-manager-controller became leader
+25m         Normal    LeaderElection      lease/cert-manager-controller                        cert-manager-certmanager-6bbc5655b6-qbmdb-external-cert-manager-controller became leader
+13m         Normal    LeaderElection      lease/cert-manager-controller                        cert-manager-certmanager-6bbc5655b6-6c56x-external-cert-manager-controller became leader
+86m         Warning   FailedScheduling    pod/cilium-envoy-7vlm7                               0/1 nodes are available: 1 node(s) didn't match pod affinity rules. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+86m         Normal    Scheduled           pod/cilium-envoy-7vlm7                               Successfully assigned kube-system/cilium-envoy-7vlm7 to k8s-control-1
+86m         Normal    Pulling             pod/cilium-envoy-7vlm7                               Pulling image "quay.io/cilium/cilium-envoy:v1.30.9-1737073743-40a016d11c0d863b772961ed0168eea6fe6b10a5@sha256:a69dfe0e54b24b0ff747385c8feeae0612cfbcae97bfcc8ee42a773bb3f69c88"
+85m         Normal    Pulled              pod/cilium-envoy-7vlm7                               Successfully pulled image "quay.io/cilium/cilium-envoy:v1.30.9-1737073743-40a016d11c0d863b772961ed0168eea6fe6b10a5@sha256:a69dfe0e54b24b0ff747385c8feeae0612cfbcae97bfcc8ee42a773bb3f69c88" in 28.937s (28.937s including waiting). Image size: 62866349 bytes.
+85m         Normal    Created             pod/cilium-envoy-7vlm7                               Created container: cilium-envoy
+85m         Normal    Started             pod/cilium-envoy-7vlm7                               Started container cilium-envoy
+84m         Warning   Unhealthy           pod/cilium-envoy-7vlm7                               Startup probe failed: Get "http://127.0.0.1:9878/healthz": dial tcp 127.0.0.1:9878: connect: connection refused
+26m         Normal    SandboxChanged      pod/cilium-envoy-7vlm7                               Pod sandbox changed, it will be killed and re-created.
+26m         Normal    Pulled              pod/cilium-envoy-7vlm7                               Container image "quay.io/cilium/cilium-envoy:v1.30.9-1737073743-40a016d11c0d863b772961ed0168eea6fe6b10a5@sha256:a69dfe0e54b24b0ff747385c8feeae0612cfbcae97bfcc8ee42a773bb3f69c88" already present on machine
+26m         Normal    Created             pod/cilium-envoy-7vlm7                               Created container: cilium-envoy
+26m         Normal    Started             pod/cilium-envoy-7vlm7                               Started container cilium-envoy
+26m         Warning   Unhealthy           pod/cilium-envoy-7vlm7                               Startup probe failed: Get "http://127.0.0.1:9878/healthz": dial tcp 127.0.0.1:9878: connect: connection refused
+15m         Normal    Pulled              pod/cilium-envoy-7vlm7                               Container image "quay.io/cilium/cilium-envoy:v1.30.9-1737073743-40a016d11c0d863b772961ed0168eea6fe6b10a5@sha256:a69dfe0e54b24b0ff747385c8feeae0612cfbcae97bfcc8ee42a773bb3f69c88" already present on machine
+15m         Normal    Created             pod/cilium-envoy-7vlm7                               Created container: cilium-envoy
+15m         Normal    Started             pod/cilium-envoy-7vlm7                               Started container cilium-envoy
+14m         Warning   Unhealthy           pod/cilium-envoy-7vlm7                               Startup probe failed: Get "http://127.0.0.1:9878/healthz": dial tcp 127.0.0.1:9878: connect: connection refused
+86m         Normal    SuccessfulCreate    daemonset/cilium-envoy                               Created pod: cilium-envoy-7vlm7
+78m         Normal    Scheduled           pod/cilium-m7cx9                                     Successfully assigned kube-system/cilium-m7cx9 to k8s-control-1
+78m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+78m         Normal    Created             pod/cilium-m7cx9                                     Created container: config
+78m         Normal    Started             pod/cilium-m7cx9                                     Started container config
+78m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+77m         Normal    Created             pod/cilium-m7cx9                                     Created container: mount-cgroup
+77m         Normal    Started             pod/cilium-m7cx9                                     Started container mount-cgroup
+77m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+77m         Normal    Created             pod/cilium-m7cx9                                     Created container: apply-sysctl-overwrites
+77m         Normal    Started             pod/cilium-m7cx9                                     Started container apply-sysctl-overwrites
+77m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+77m         Normal    Created             pod/cilium-m7cx9                                     Created container: clean-cilium-state
+77m         Normal    Started             pod/cilium-m7cx9                                     Started container clean-cilium-state
+77m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+77m         Normal    Created             pod/cilium-m7cx9                                     Created container: install-cni-binaries
+77m         Normal    Started             pod/cilium-m7cx9                                     Started container install-cni-binaries
+77m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+77m         Normal    Created             pod/cilium-m7cx9                                     Created container: cilium-agent
+77m         Normal    Started             pod/cilium-m7cx9                                     Started container cilium-agent
+77m         Warning   Unhealthy           pod/cilium-m7cx9                                     Startup probe failed: Get "http://127.0.0.1:9879/healthz": dial tcp 127.0.0.1:9879: connect: connection refused
+26m         Normal    SandboxChanged      pod/cilium-m7cx9                                     Pod sandbox changed, it will be killed and re-created.
+26m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+26m         Normal    Created             pod/cilium-m7cx9                                     Created container: config
+26m         Normal    Started             pod/cilium-m7cx9                                     Started container config
+26m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+26m         Normal    Created             pod/cilium-m7cx9                                     Created container: mount-cgroup
+26m         Normal    Started             pod/cilium-m7cx9                                     Started container mount-cgroup
+26m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+26m         Normal    Created             pod/cilium-m7cx9                                     Created container: apply-sysctl-overwrites
+26m         Normal    Started             pod/cilium-m7cx9                                     Started container apply-sysctl-overwrites
+26m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+26m         Normal    Created             pod/cilium-m7cx9                                     Created container: clean-cilium-state
+26m         Normal    Started             pod/cilium-m7cx9                                     Started container clean-cilium-state
+26m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+26m         Normal    Created             pod/cilium-m7cx9                                     Created container: install-cni-binaries
+26m         Normal    Started             pod/cilium-m7cx9                                     Started container install-cni-binaries
+26m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+26m         Normal    Created             pod/cilium-m7cx9                                     Created container: cilium-agent
+26m         Normal    Started             pod/cilium-m7cx9                                     Started container cilium-agent
+26m         Warning   Unhealthy           pod/cilium-m7cx9                                     Startup probe failed: Get "http://127.0.0.1:9879/healthz": dial tcp 127.0.0.1:9879: connect: connection refused
+15m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+15m         Normal    Created             pod/cilium-m7cx9                                     Created container: config
+15m         Normal    Started             pod/cilium-m7cx9                                     Started container config
+15m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+15m         Normal    Created             pod/cilium-m7cx9                                     Created container: mount-cgroup
+15m         Normal    Started             pod/cilium-m7cx9                                     Started container mount-cgroup
+15m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+15m         Normal    Created             pod/cilium-m7cx9                                     Created container: apply-sysctl-overwrites
+15m         Normal    Started             pod/cilium-m7cx9                                     Started container apply-sysctl-overwrites
+15m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+15m         Normal    Created             pod/cilium-m7cx9                                     Created container: clean-cilium-state
+15m         Normal    Started             pod/cilium-m7cx9                                     Started container clean-cilium-state
+15m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+14m         Normal    Created             pod/cilium-m7cx9                                     Created container: install-cni-binaries
+14m         Normal    Started             pod/cilium-m7cx9                                     Started container install-cni-binaries
+14m         Normal    Pulled              pod/cilium-m7cx9                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+14m         Normal    Created             pod/cilium-m7cx9                                     Created container: cilium-agent
+14m         Normal    Started             pod/cilium-m7cx9                                     Started container cilium-agent
+14m         Warning   Unhealthy           pod/cilium-m7cx9                                     Startup probe failed: Get "http://127.0.0.1:9879/healthz": dial tcp 127.0.0.1:9879: connect: connection refused
+86m         Warning   FailedScheduling    pod/cilium-operator-6679d5df8b-48sf2                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+84m         Warning   FailedScheduling    pod/cilium-operator-6679d5df8b-48sf2                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+78m         Warning   FailedScheduling    pod/cilium-operator-6679d5df8b-48sf2                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.
+86m         Normal    Scheduled           pod/cilium-operator-6679d5df8b-mbwr4                 Successfully assigned kube-system/cilium-operator-6679d5df8b-mbwr4 to k8s-control-1
+86m         Normal    Pulling             pod/cilium-operator-6679d5df8b-mbwr4                 Pulling image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc"
+85m         Normal    Pulled              pod/cilium-operator-6679d5df8b-mbwr4                 Successfully pulled image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc" in 21.542s (21.542s including waiting). Image size: 31231047 bytes.
+78m         Normal    Created             pod/cilium-operator-6679d5df8b-mbwr4                 Created container: cilium-operator
+78m         Normal    Started             pod/cilium-operator-6679d5df8b-mbwr4                 Started container cilium-operator
+78m         Warning   Unhealthy           pod/cilium-operator-6679d5df8b-mbwr4                 Readiness probe failed: Get "http://127.0.0.1:9234/healthz": dial tcp 127.0.0.1:9234: connect: connection refused
+79m         Warning   Unhealthy           pod/cilium-operator-6679d5df8b-mbwr4                 Liveness probe failed: Get "http://127.0.0.1:9234/healthz": dial tcp 127.0.0.1:9234: connect: connection refused
+78m         Normal    Pulled              pod/cilium-operator-6679d5df8b-mbwr4                 Container image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc" already present on machine
+79m         Warning   BackOff             pod/cilium-operator-6679d5df8b-mbwr4                 Back-off restarting failed container cilium-operator in pod cilium-operator-6679d5df8b-mbwr4_kube-system(4cb6d364-f48d-430a-ae7f-b8966ea01a4d)
+48m         Normal    Killing             pod/cilium-operator-6679d5df8b-mbwr4                 Stopping container cilium-operator
+86m         Normal    SuccessfulCreate    replicaset/cilium-operator-6679d5df8b                Created pod: cilium-operator-6679d5df8b-mbwr4
+86m         Normal    SuccessfulCreate    replicaset/cilium-operator-6679d5df8b                Created pod: cilium-operator-6679d5df8b-48sf2
+78m         Normal    SuccessfulDelete    replicaset/cilium-operator-6679d5df8b                Deleted pod: cilium-operator-6679d5df8b-48sf2
+48m         Normal    SuccessfulDelete    replicaset/cilium-operator-6679d5df8b                Deleted pod: cilium-operator-6679d5df8b-mbwr4
+78m         Warning   FailedScheduling    pod/cilium-operator-69ff5d9f68-cxcxq                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.
+52m         Warning   FailedScheduling    pod/cilium-operator-69ff5d9f68-cxcxq                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.
+78m         Warning   FailedScheduling    pod/cilium-operator-69ff5d9f68-vfw2l                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.
+51m         Warning   FailedScheduling    pod/cilium-operator-69ff5d9f68-vfw2l                 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. preemption: 0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.
+48m         Normal    Scheduled           pod/cilium-operator-69ff5d9f68-vfw2l                 Successfully assigned kube-system/cilium-operator-69ff5d9f68-vfw2l to k8s-control-1
+48m         Normal    Pulled              pod/cilium-operator-69ff5d9f68-vfw2l                 Container image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc" already present on machine
+48m         Normal    Created             pod/cilium-operator-69ff5d9f68-vfw2l                 Created container: cilium-operator
+48m         Normal    Started             pod/cilium-operator-69ff5d9f68-vfw2l                 Started container cilium-operator
+48m         Warning   Unhealthy           pod/cilium-operator-69ff5d9f68-vfw2l                 Readiness probe failed: Get "http://127.0.0.1:9234/healthz": dial tcp 127.0.0.1:9234: connect: connection refused
+26m         Normal    SandboxChanged      pod/cilium-operator-69ff5d9f68-vfw2l                 Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/cilium-operator-69ff5d9f68-vfw2l                 Container image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc" already present on machine
+23m         Normal    Created             pod/cilium-operator-69ff5d9f68-vfw2l                 Created container: cilium-operator
+23m         Normal    Started             pod/cilium-operator-69ff5d9f68-vfw2l                 Started container cilium-operator
+24m         Warning   Unhealthy           pod/cilium-operator-69ff5d9f68-vfw2l                 Readiness probe failed: Get "http://127.0.0.1:9234/healthz": dial tcp 127.0.0.1:9234: connect: connection refused
+24m         Warning   BackOff             pod/cilium-operator-69ff5d9f68-vfw2l                 Back-off restarting failed container cilium-operator in pod cilium-operator-69ff5d9f68-vfw2l_kube-system(b6ab4900-1d54-4eed-98b1-50470adc9c10)
+23m         Normal    Killing             pod/cilium-operator-69ff5d9f68-vfw2l                 Stopping container cilium-operator
+23m         Normal    Scheduled           pod/cilium-operator-69ff5d9f68-wmr66                 Successfully assigned kube-system/cilium-operator-69ff5d9f68-wmr66 to k8s-control-1
+23m         Normal    Pulled              pod/cilium-operator-69ff5d9f68-wmr66                 Container image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc" already present on machine
+23m         Normal    Created             pod/cilium-operator-69ff5d9f68-wmr66                 Created container: cilium-operator
+23m         Normal    Started             pod/cilium-operator-69ff5d9f68-wmr66                 Started container cilium-operator
+23m         Warning   Unhealthy           pod/cilium-operator-69ff5d9f68-wmr66                 Readiness probe failed: Get "http://127.0.0.1:9234/healthz": dial tcp 127.0.0.1:9234: connect: connection refused
+15m         Normal    Pulled              pod/cilium-operator-69ff5d9f68-wmr66                 Container image "quay.io/cilium/operator-generic:v1.16.6@sha256:13d32071d5a52c069fb7c35959a56009c6914439adc73e99e098917646d154fc" already present on machine
+15m         Normal    Created             pod/cilium-operator-69ff5d9f68-wmr66                 Created container: cilium-operator
+15m         Normal    Started             pod/cilium-operator-69ff5d9f68-wmr66                 Started container cilium-operator
+15m         Warning   Unhealthy           pod/cilium-operator-69ff5d9f68-wmr66                 Readiness probe failed: Get "http://127.0.0.1:9234/healthz": dial tcp 127.0.0.1:9234: connect: connection refused
+78m         Normal    SuccessfulCreate    replicaset/cilium-operator-69ff5d9f68                Created pod: cilium-operator-69ff5d9f68-cxcxq
+78m         Normal    SuccessfulCreate    replicaset/cilium-operator-69ff5d9f68                Created pod: cilium-operator-69ff5d9f68-vfw2l
+48m         Normal    SuccessfulDelete    replicaset/cilium-operator-69ff5d9f68                Deleted pod: cilium-operator-69ff5d9f68-cxcxq
+23m         Normal    SuccessfulCreate    replicaset/cilium-operator-69ff5d9f68                Created pod: cilium-operator-69ff5d9f68-wmr66
+86m         Normal    ScalingReplicaSet   deployment/cilium-operator                           Scaled up replica set cilium-operator-6679d5df8b from 0 to 2
+78m         Normal    ScalingReplicaSet   deployment/cilium-operator                           Scaled up replica set cilium-operator-69ff5d9f68 from 0 to 1
+78m         Normal    ScalingReplicaSet   deployment/cilium-operator                           Scaled down replica set cilium-operator-6679d5df8b from 2 to 1
+78m         Normal    ScalingReplicaSet   deployment/cilium-operator                           Scaled up replica set cilium-operator-69ff5d9f68 from 1 to 2
+48m         Normal    ScalingReplicaSet   deployment/cilium-operator                           Scaled down replica set cilium-operator-69ff5d9f68 from 2 to 1
+48m         Normal    ScalingReplicaSet   deployment/cilium-operator                           Scaled down replica set cilium-operator-6679d5df8b from 1 to 0
+86m         Normal    Scheduled           pod/cilium-twrwj                                     Successfully assigned kube-system/cilium-twrwj to k8s-control-1
+86m         Normal    Pulling             pod/cilium-twrwj                                     Pulling image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da"
+85m         Normal    Pulled              pod/cilium-twrwj                                     Successfully pulled image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" in 47.624s (47.624s including waiting). Image size: 224362848 bytes.
+85m         Normal    Created             pod/cilium-twrwj                                     Created container: config
+85m         Normal    Started             pod/cilium-twrwj                                     Started container config
+85m         Normal    Pulled              pod/cilium-twrwj                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+85m         Normal    Created             pod/cilium-twrwj                                     Created container: mount-cgroup
+85m         Normal    Started             pod/cilium-twrwj                                     Started container mount-cgroup
+85m         Normal    Pulled              pod/cilium-twrwj                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+85m         Normal    Created             pod/cilium-twrwj                                     Created container: apply-sysctl-overwrites
+85m         Normal    Started             pod/cilium-twrwj                                     Started container apply-sysctl-overwrites
+85m         Normal    Pulled              pod/cilium-twrwj                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+85m         Normal    Created             pod/cilium-twrwj                                     Created container: clean-cilium-state
+85m         Normal    Started             pod/cilium-twrwj                                     Started container clean-cilium-state
+85m         Normal    Pulled              pod/cilium-twrwj                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+85m         Normal    Created             pod/cilium-twrwj                                     Created container: install-cni-binaries
+85m         Normal    Started             pod/cilium-twrwj                                     Started container install-cni-binaries
+85m         Normal    Pulled              pod/cilium-twrwj                                     Container image "quay.io/cilium/cilium:v1.16.6@sha256:1e0896b1c4c188b4812c7e0bed7ec3f5631388ca88325c1391a0ef9172c448da" already present on machine
+85m         Normal    Created             pod/cilium-twrwj                                     Created container: cilium-agent
+85m         Normal    Started             pod/cilium-twrwj                                     Started container cilium-agent
+84m         Warning   Unhealthy           pod/cilium-twrwj                                     Startup probe failed: Get "http://127.0.0.1:9879/healthz": dial tcp 127.0.0.1:9879: connect: connection refused
+78m         Normal    Killing             pod/cilium-twrwj                                     Stopping container cilium-agent
+86m         Normal    SuccessfulCreate    daemonset/cilium                                     Created pod: cilium-twrwj
+78m         Normal    HelmChartCreated    helmrelease/cilium                                   Created HelmChart/flux-system/kube-system-cilium with SourceRef 'HelmRepository/flux-system/cilium'
+78m         Normal    SuccessfulDelete    daemonset/cilium                                     Deleted pod: cilium-twrwj
+78m         Normal    SuccessfulCreate    daemonset/cilium                                     Created pod: cilium-m7cx9
+76m         Warning   UpgradeFailed       helmrelease/cilium                                   Helm upgrade failed for release kube-system/cilium with chart cilium@1.16.6: context canceled...
+56m         Warning   UpgradeFailed       helmrelease/cilium                                   Helm upgrade failed for release kube-system/cilium with chart cilium@1.16.6: context deadline exceeded...
+48m         Normal    UpgradeSucceeded    helmrelease/cilium                                   Helm upgrade succeeded for release kube-system/cilium.v4 with chart cilium@1.16.6
+86m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-58ksp                         no nodes available to schedule pods
+86m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-58ksp                         no nodes available to schedule pods
+84m         Normal    Scheduled           pod/coredns-578d4f8ffc-58ksp                         Successfully assigned kube-system/coredns-578d4f8ffc-58ksp to k8s-control-1
+84m         Normal    Pulling             pod/coredns-578d4f8ffc-58ksp                         Pulling image "registry.k8s.io/coredns/coredns:v1.12.0"
+84m         Normal    Pulled              pod/coredns-578d4f8ffc-58ksp                         Successfully pulled image "registry.k8s.io/coredns/coredns:v1.12.0" in 22.405s (22.405s including waiting). Image size: 20939036 bytes.
+84m         Normal    Created             pod/coredns-578d4f8ffc-58ksp                         Created container: coredns
+84m         Normal    Started             pod/coredns-578d4f8ffc-58ksp                         Started container coredns
+84m         Warning   Unhealthy           pod/coredns-578d4f8ffc-58ksp                         Readiness probe failed: Get "http://172.16.0.7:8181/ready": dial tcp 172.16.0.7:8181: connect: connection refused
+26m         Normal    SandboxChanged      pod/coredns-578d4f8ffc-58ksp                         Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/coredns-578d4f8ffc-58ksp                         Container image "registry.k8s.io/coredns/coredns:v1.12.0" already present on machine
+24m         Normal    Created             pod/coredns-578d4f8ffc-58ksp                         Created container: coredns
+24m         Normal    Started             pod/coredns-578d4f8ffc-58ksp                         Started container coredns
+24m         Normal    Killing             pod/coredns-578d4f8ffc-58ksp                         Stopping container coredns
+24m         Warning   Unhealthy           pod/coredns-578d4f8ffc-58ksp                         Readiness probe failed: Get "http://172.16.0.234:8181/ready": dial tcp 172.16.0.234:8181: connect: connection refused
+23m         Warning   Unhealthy           pod/coredns-578d4f8ffc-58ksp                         Readiness probe failed: HTTP probe failed with statuscode: 503
+23m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-7khnw                         0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-7khnw                         0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/coredns-578d4f8ffc-7khnw                         Successfully assigned kube-system/coredns-578d4f8ffc-7khnw to k8s-control-1
+14m         Normal    Pulled              pod/coredns-578d4f8ffc-7khnw                         Container image "registry.k8s.io/coredns/coredns:v1.12.0" already present on machine
+14m         Normal    Created             pod/coredns-578d4f8ffc-7khnw                         Created container: coredns
+14m         Normal    Started             pod/coredns-578d4f8ffc-7khnw                         Started container coredns
+25m         Normal    Scheduled           pod/coredns-578d4f8ffc-9gd2x                         Successfully assigned kube-system/coredns-578d4f8ffc-9gd2x to k8s-control-1
+24m         Normal    Pulled              pod/coredns-578d4f8ffc-9gd2x                         Container image "registry.k8s.io/coredns/coredns:v1.12.0" already present on machine
+24m         Normal    Created             pod/coredns-578d4f8ffc-9gd2x                         Created container: coredns
+24m         Normal    Started             pod/coredns-578d4f8ffc-9gd2x                         Started container coredns
+23m         Warning   Unhealthy           pod/coredns-578d4f8ffc-9gd2x                         Readiness probe failed: Get "http://172.16.0.240:8181/ready": dial tcp 172.16.0.240:8181: connect: connection refused
+23m         Normal    Killing             pod/coredns-578d4f8ffc-9gd2x                         Stopping container coredns
+86m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-jtr8r                         no nodes available to schedule pods
+86m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-jtr8r                         no nodes available to schedule pods
+84m         Normal    Scheduled           pod/coredns-578d4f8ffc-jtr8r                         Successfully assigned kube-system/coredns-578d4f8ffc-jtr8r to k8s-control-1
+84m         Normal    Pulling             pod/coredns-578d4f8ffc-jtr8r                         Pulling image "registry.k8s.io/coredns/coredns:v1.12.0"
+84m         Normal    Pulled              pod/coredns-578d4f8ffc-jtr8r                         Successfully pulled image "registry.k8s.io/coredns/coredns:v1.12.0" in 22.908s (22.908s including waiting). Image size: 20939036 bytes.
+84m         Normal    Created             pod/coredns-578d4f8ffc-jtr8r                         Created container: coredns
+84m         Normal    Started             pod/coredns-578d4f8ffc-jtr8r                         Started container coredns
+84m         Warning   Unhealthy           pod/coredns-578d4f8ffc-jtr8r                         Readiness probe failed: HTTP probe failed with statuscode: 503
+26m         Normal    SandboxChanged      pod/coredns-578d4f8ffc-jtr8r                         Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/coredns-578d4f8ffc-jtr8r                         Container image "registry.k8s.io/coredns/coredns:v1.12.0" already present on machine
+24m         Normal    Created             pod/coredns-578d4f8ffc-jtr8r                         Created container: coredns
+24m         Normal    Started             pod/coredns-578d4f8ffc-jtr8r                         Started container coredns
+24m         Normal    Killing             pod/coredns-578d4f8ffc-jtr8r                         Stopping container coredns
+24m         Warning   Unhealthy           pod/coredns-578d4f8ffc-jtr8r                         Readiness probe failed: Get "http://172.16.0.121:8181/ready": dial tcp 172.16.0.121:8181: connect: connection refused
+23m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-r2wpl                         0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/coredns-578d4f8ffc-r2wpl                         0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/coredns-578d4f8ffc-r2wpl                         Successfully assigned kube-system/coredns-578d4f8ffc-r2wpl to k8s-control-1
+14m         Normal    Pulled              pod/coredns-578d4f8ffc-r2wpl                         Container image "registry.k8s.io/coredns/coredns:v1.12.0" already present on machine
+14m         Normal    Created             pod/coredns-578d4f8ffc-r2wpl                         Created container: coredns
+14m         Normal    Started             pod/coredns-578d4f8ffc-r2wpl                         Started container coredns
+25m         Normal    Scheduled           pod/coredns-578d4f8ffc-wfqsn                         Successfully assigned kube-system/coredns-578d4f8ffc-wfqsn to k8s-control-1
+24m         Normal    Pulled              pod/coredns-578d4f8ffc-wfqsn                         Container image "registry.k8s.io/coredns/coredns:v1.12.0" already present on machine
+24m         Normal    Created             pod/coredns-578d4f8ffc-wfqsn                         Created container: coredns
+24m         Normal    Started             pod/coredns-578d4f8ffc-wfqsn                         Started container coredns
+24m         Warning   Unhealthy           pod/coredns-578d4f8ffc-wfqsn                         Readiness probe failed: Get "http://172.16.0.229:8181/ready": dial tcp 172.16.0.229:8181: connect: connection refused
+23m         Normal    Killing             pod/coredns-578d4f8ffc-wfqsn                         Stopping container coredns
+86m         Normal    SuccessfulCreate    replicaset/coredns-578d4f8ffc                        Created pod: coredns-578d4f8ffc-jtr8r
+86m         Normal    SuccessfulCreate    replicaset/coredns-578d4f8ffc                        Created pod: coredns-578d4f8ffc-58ksp
+25m         Normal    SuccessfulCreate    replicaset/coredns-578d4f8ffc                        Created pod: coredns-578d4f8ffc-9gd2x
+25m         Normal    SuccessfulCreate    replicaset/coredns-578d4f8ffc                        Created pod: coredns-578d4f8ffc-wfqsn
+23m         Normal    SuccessfulCreate    replicaset/coredns-578d4f8ffc                        Created pod: coredns-578d4f8ffc-r2wpl
+23m         Normal    SuccessfulCreate    replicaset/coredns-578d4f8ffc                        Created pod: coredns-578d4f8ffc-7khnw
+86m         Normal    ScalingReplicaSet   deployment/coredns                                   Scaled up replica set coredns-578d4f8ffc from 0 to 2
+82m         Normal    Scheduled           pod/descheduler-29035922-gd2dr                       Successfully assigned kube-system/descheduler-29035922-gd2dr to k8s-control-1
+82m         Normal    Pulling             pod/descheduler-29035922-gd2dr                       Pulling image "registry.k8s.io/descheduler/descheduler:v0.31.0"
+81m         Normal    Pulled              pod/descheduler-29035922-gd2dr                       Successfully pulled image "registry.k8s.io/descheduler/descheduler:v0.31.0" in 29.604s (29.604s including waiting). Image size: 37500279 bytes.
+81m         Normal    Created             pod/descheduler-29035922-gd2dr                       Created container: descheduler
+81m         Normal    Started             pod/descheduler-29035922-gd2dr                       Started container descheduler
+82m         Normal    SuccessfulCreate    job/descheduler-29035922                             Created pod: descheduler-29035922-gd2dr
+81m         Normal    Completed           job/descheduler-29035922                             Job completed
+80m         Normal    Scheduled           pod/descheduler-29035924-56b5c                       Successfully assigned kube-system/descheduler-29035924-56b5c to k8s-control-1
+79m         Normal    Pulled              pod/descheduler-29035924-56b5c                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+79m         Normal    Created             pod/descheduler-29035924-56b5c                       Created container: descheduler
+79m         Normal    Started             pod/descheduler-29035924-56b5c                       Started container descheduler
+79m         Warning   Unhealthy           pod/descheduler-29035924-56b5c                       Liveness probe failed: Get "https://172.16.0.96:10258/healthz": dial tcp 172.16.0.96:10258: connect: connection refused
+80m         Normal    SuccessfulCreate    job/descheduler-29035924                             Created pod: descheduler-29035924-56b5c
+78m         Normal    Completed           job/descheduler-29035924                             Job completed
+78m         Normal    Scheduled           pod/descheduler-29035926-hmpxb                       Successfully assigned kube-system/descheduler-29035926-hmpxb to k8s-control-1
+77m         Normal    Pulled              pod/descheduler-29035926-hmpxb                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+77m         Normal    Created             pod/descheduler-29035926-hmpxb                       Created container: descheduler
+77m         Normal    Started             pod/descheduler-29035926-hmpxb                       Started container descheduler
+78m         Normal    SuccessfulCreate    job/descheduler-29035926                             Created pod: descheduler-29035926-hmpxb
+77m         Normal    Completed           job/descheduler-29035926                             Job completed
+76m         Normal    Scheduled           pod/descheduler-29035928-nwsgg                       Successfully assigned kube-system/descheduler-29035928-nwsgg to k8s-control-1
+75m         Normal    Pulled              pod/descheduler-29035928-nwsgg                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+75m         Normal    Created             pod/descheduler-29035928-nwsgg                       Created container: descheduler
+75m         Normal    Started             pod/descheduler-29035928-nwsgg                       Started container descheduler
+76m         Normal    SuccessfulCreate    job/descheduler-29035928                             Created pod: descheduler-29035928-nwsgg
+75m         Normal    Completed           job/descheduler-29035928                             Job completed
+74m         Normal    Scheduled           pod/descheduler-29035930-t9dgx                       Successfully assigned kube-system/descheduler-29035930-t9dgx to k8s-control-1
+74m         Normal    Pulled              pod/descheduler-29035930-t9dgx                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+74m         Normal    Created             pod/descheduler-29035930-t9dgx                       Created container: descheduler
+74m         Normal    Started             pod/descheduler-29035930-t9dgx                       Started container descheduler
+74m         Normal    SuccessfulCreate    job/descheduler-29035930                             Created pod: descheduler-29035930-t9dgx
+74m         Normal    Completed           job/descheduler-29035930                             Job completed
+72m         Normal    Scheduled           pod/descheduler-29035932-75bk4                       Successfully assigned kube-system/descheduler-29035932-75bk4 to k8s-control-1
+72m         Normal    Pulled              pod/descheduler-29035932-75bk4                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+72m         Normal    Created             pod/descheduler-29035932-75bk4                       Created container: descheduler
+72m         Normal    Started             pod/descheduler-29035932-75bk4                       Started container descheduler
+72m         Normal    SuccessfulCreate    job/descheduler-29035932                             Created pod: descheduler-29035932-75bk4
+72m         Normal    Completed           job/descheduler-29035932                             Job completed
+70m         Normal    Scheduled           pod/descheduler-29035934-cjktg                       Successfully assigned kube-system/descheduler-29035934-cjktg to k8s-control-1
+70m         Normal    Pulled              pod/descheduler-29035934-cjktg                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+70m         Normal    Created             pod/descheduler-29035934-cjktg                       Created container: descheduler
+70m         Normal    Started             pod/descheduler-29035934-cjktg                       Started container descheduler
+70m         Normal    SuccessfulCreate    job/descheduler-29035934                             Created pod: descheduler-29035934-cjktg
+70m         Normal    Completed           job/descheduler-29035934                             Job completed
+68m         Normal    Scheduled           pod/descheduler-29035936-crd9v                       Successfully assigned kube-system/descheduler-29035936-crd9v to k8s-control-1
+68m         Normal    Pulled              pod/descheduler-29035936-crd9v                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+68m         Normal    Created             pod/descheduler-29035936-crd9v                       Created container: descheduler
+68m         Normal    Started             pod/descheduler-29035936-crd9v                       Started container descheduler
+68m         Normal    SuccessfulCreate    job/descheduler-29035936                             Created pod: descheduler-29035936-crd9v
+68m         Normal    Completed           job/descheduler-29035936                             Job completed
+66m         Normal    Scheduled           pod/descheduler-29035938-5t8zw                       Successfully assigned kube-system/descheduler-29035938-5t8zw to k8s-control-1
+66m         Normal    Pulled              pod/descheduler-29035938-5t8zw                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+66m         Normal    Created             pod/descheduler-29035938-5t8zw                       Created container: descheduler
+66m         Normal    Started             pod/descheduler-29035938-5t8zw                       Started container descheduler
+66m         Normal    SuccessfulCreate    job/descheduler-29035938                             Created pod: descheduler-29035938-5t8zw
+66m         Normal    Completed           job/descheduler-29035938                             Job completed
+64m         Normal    Scheduled           pod/descheduler-29035940-x8sj8                       Successfully assigned kube-system/descheduler-29035940-x8sj8 to k8s-control-1
+64m         Normal    Pulled              pod/descheduler-29035940-x8sj8                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+64m         Normal    Created             pod/descheduler-29035940-x8sj8                       Created container: descheduler
+64m         Normal    Started             pod/descheduler-29035940-x8sj8                       Started container descheduler
+64m         Normal    SuccessfulCreate    job/descheduler-29035940                             Created pod: descheduler-29035940-x8sj8
+64m         Normal    Completed           job/descheduler-29035940                             Job completed
+62m         Normal    Scheduled           pod/descheduler-29035942-4b6p9                       Successfully assigned kube-system/descheduler-29035942-4b6p9 to k8s-control-1
+62m         Normal    Pulled              pod/descheduler-29035942-4b6p9                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+62m         Normal    Created             pod/descheduler-29035942-4b6p9                       Created container: descheduler
+62m         Normal    Started             pod/descheduler-29035942-4b6p9                       Started container descheduler
+62m         Normal    SuccessfulCreate    job/descheduler-29035942                             Created pod: descheduler-29035942-4b6p9
+62m         Normal    Completed           job/descheduler-29035942                             Job completed
+60m         Normal    Scheduled           pod/descheduler-29035944-9n4dz                       Successfully assigned kube-system/descheduler-29035944-9n4dz to k8s-control-1
+60m         Normal    Pulled              pod/descheduler-29035944-9n4dz                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+60m         Normal    Created             pod/descheduler-29035944-9n4dz                       Created container: descheduler
+60m         Normal    Started             pod/descheduler-29035944-9n4dz                       Started container descheduler
+60m         Normal    SuccessfulCreate    job/descheduler-29035944                             Created pod: descheduler-29035944-9n4dz
+60m         Normal    Completed           job/descheduler-29035944                             Job completed
+58m         Normal    Scheduled           pod/descheduler-29035946-jrjbw                       Successfully assigned kube-system/descheduler-29035946-jrjbw to k8s-control-1
+58m         Normal    Pulled              pod/descheduler-29035946-jrjbw                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+58m         Normal    Created             pod/descheduler-29035946-jrjbw                       Created container: descheduler
+58m         Normal    Started             pod/descheduler-29035946-jrjbw                       Started container descheduler
+58m         Normal    SuccessfulCreate    job/descheduler-29035946                             Created pod: descheduler-29035946-jrjbw
+58m         Normal    Completed           job/descheduler-29035946                             Job completed
+56m         Normal    Scheduled           pod/descheduler-29035948-rvf9v                       Successfully assigned kube-system/descheduler-29035948-rvf9v to k8s-control-1
+56m         Normal    Pulled              pod/descheduler-29035948-rvf9v                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+56m         Normal    Created             pod/descheduler-29035948-rvf9v                       Created container: descheduler
+56m         Normal    Started             pod/descheduler-29035948-rvf9v                       Started container descheduler
+56m         Normal    SuccessfulCreate    job/descheduler-29035948                             Created pod: descheduler-29035948-rvf9v
+56m         Normal    Completed           job/descheduler-29035948                             Job completed
+54m         Normal    Scheduled           pod/descheduler-29035950-x7g66                       Successfully assigned kube-system/descheduler-29035950-x7g66 to k8s-control-1
+54m         Normal    Pulled              pod/descheduler-29035950-x7g66                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+54m         Normal    Created             pod/descheduler-29035950-x7g66                       Created container: descheduler
+54m         Normal    Started             pod/descheduler-29035950-x7g66                       Started container descheduler
+54m         Normal    SuccessfulCreate    job/descheduler-29035950                             Created pod: descheduler-29035950-x7g66
+53m         Normal    Completed           job/descheduler-29035950                             Job completed
+52m         Normal    Scheduled           pod/descheduler-29035952-wg77d                       Successfully assigned kube-system/descheduler-29035952-wg77d to k8s-control-1
+52m         Normal    Pulled              pod/descheduler-29035952-wg77d                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+52m         Normal    Created             pod/descheduler-29035952-wg77d                       Created container: descheduler
+52m         Normal    Started             pod/descheduler-29035952-wg77d                       Started container descheduler
+52m         Normal    SuccessfulCreate    job/descheduler-29035952                             Created pod: descheduler-29035952-wg77d
+52m         Normal    Completed           job/descheduler-29035952                             Job completed
+50m         Normal    Scheduled           pod/descheduler-29035954-5cbzk                       Successfully assigned kube-system/descheduler-29035954-5cbzk to k8s-control-1
+50m         Normal    Pulled              pod/descheduler-29035954-5cbzk                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+50m         Normal    Created             pod/descheduler-29035954-5cbzk                       Created container: descheduler
+50m         Normal    Started             pod/descheduler-29035954-5cbzk                       Started container descheduler
+50m         Normal    SuccessfulCreate    job/descheduler-29035954                             Created pod: descheduler-29035954-5cbzk
+50m         Normal    Completed           job/descheduler-29035954                             Job completed
+48m         Normal    Scheduled           pod/descheduler-29035956-266gh                       Successfully assigned kube-system/descheduler-29035956-266gh to k8s-control-1
+48m         Normal    Pulled              pod/descheduler-29035956-266gh                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+48m         Normal    Created             pod/descheduler-29035956-266gh                       Created container: descheduler
+48m         Normal    Started             pod/descheduler-29035956-266gh                       Started container descheduler
+48m         Normal    SuccessfulCreate    job/descheduler-29035956                             Created pod: descheduler-29035956-266gh
+47m         Normal    Completed           job/descheduler-29035956                             Job completed
+46m         Normal    Scheduled           pod/descheduler-29035958-q784v                       Successfully assigned kube-system/descheduler-29035958-q784v to k8s-control-1
+46m         Normal    Pulled              pod/descheduler-29035958-q784v                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+46m         Normal    Created             pod/descheduler-29035958-q784v                       Created container: descheduler
+46m         Normal    Started             pod/descheduler-29035958-q784v                       Started container descheduler
+46m         Normal    SuccessfulCreate    job/descheduler-29035958                             Created pod: descheduler-29035958-q784v
+45m         Normal    Completed           job/descheduler-29035958                             Job completed
+44m         Normal    Scheduled           pod/descheduler-29035960-tg5bf                       Successfully assigned kube-system/descheduler-29035960-tg5bf to k8s-control-1
+44m         Normal    Pulled              pod/descheduler-29035960-tg5bf                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+44m         Normal    Created             pod/descheduler-29035960-tg5bf                       Created container: descheduler
+44m         Normal    Started             pod/descheduler-29035960-tg5bf                       Started container descheduler
+44m         Normal    SuccessfulCreate    job/descheduler-29035960                             Created pod: descheduler-29035960-tg5bf
+44m         Normal    Completed           job/descheduler-29035960                             Job completed
+42m         Normal    Scheduled           pod/descheduler-29035962-x9lmt                       Successfully assigned kube-system/descheduler-29035962-x9lmt to k8s-control-1
+42m         Normal    Pulled              pod/descheduler-29035962-x9lmt                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+42m         Normal    Created             pod/descheduler-29035962-x9lmt                       Created container: descheduler
+42m         Normal    Started             pod/descheduler-29035962-x9lmt                       Started container descheduler
+41m         Warning   Unhealthy           pod/descheduler-29035962-x9lmt                       Liveness probe failed: Get "https://172.16.0.236:10258/healthz": dial tcp 172.16.0.236:10258: connect: connection refused
+42m         Normal    SuccessfulCreate    job/descheduler-29035962                             Created pod: descheduler-29035962-x9lmt
+41m         Normal    Completed           job/descheduler-29035962                             Job completed
+40m         Normal    Scheduled           pod/descheduler-29035964-6s75q                       Successfully assigned kube-system/descheduler-29035964-6s75q to k8s-control-1
+40m         Normal    Pulled              pod/descheduler-29035964-6s75q                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+40m         Normal    Created             pod/descheduler-29035964-6s75q                       Created container: descheduler
+40m         Normal    Started             pod/descheduler-29035964-6s75q                       Started container descheduler
+40m         Normal    SuccessfulCreate    job/descheduler-29035964                             Created pod: descheduler-29035964-6s75q
+39m         Normal    Completed           job/descheduler-29035964                             Job completed
+38m         Normal    Scheduled           pod/descheduler-29035966-2bzd5                       Successfully assigned kube-system/descheduler-29035966-2bzd5 to k8s-control-1
+38m         Normal    Pulled              pod/descheduler-29035966-2bzd5                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+38m         Normal    Created             pod/descheduler-29035966-2bzd5                       Created container: descheduler
+38m         Normal    Started             pod/descheduler-29035966-2bzd5                       Started container descheduler
+38m         Normal    SuccessfulCreate    job/descheduler-29035966                             Created pod: descheduler-29035966-2bzd5
+38m         Normal    Completed           job/descheduler-29035966                             Job completed
+36m         Normal    Scheduled           pod/descheduler-29035968-gbc4t                       Successfully assigned kube-system/descheduler-29035968-gbc4t to k8s-control-1
+36m         Normal    Pulled              pod/descheduler-29035968-gbc4t                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+36m         Normal    Created             pod/descheduler-29035968-gbc4t                       Created container: descheduler
+36m         Normal    Started             pod/descheduler-29035968-gbc4t                       Started container descheduler
+36m         Normal    SuccessfulCreate    job/descheduler-29035968                             Created pod: descheduler-29035968-gbc4t
+36m         Normal    Completed           job/descheduler-29035968                             Job completed
+34m         Normal    Scheduled           pod/descheduler-29035970-qpk5l                       Successfully assigned kube-system/descheduler-29035970-qpk5l to k8s-control-1
+34m         Normal    Pulled              pod/descheduler-29035970-qpk5l                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+34m         Normal    Created             pod/descheduler-29035970-qpk5l                       Created container: descheduler
+34m         Normal    Started             pod/descheduler-29035970-qpk5l                       Started container descheduler
+34m         Normal    SuccessfulCreate    job/descheduler-29035970                             Created pod: descheduler-29035970-qpk5l
+33m         Normal    Completed           job/descheduler-29035970                             Job completed
+32m         Normal    Scheduled           pod/descheduler-29035972-dbqjb                       Successfully assigned kube-system/descheduler-29035972-dbqjb to k8s-control-1
+32m         Normal    Pulled              pod/descheduler-29035972-dbqjb                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+32m         Normal    Created             pod/descheduler-29035972-dbqjb                       Created container: descheduler
+32m         Normal    Started             pod/descheduler-29035972-dbqjb                       Started container descheduler
+32m         Normal    SuccessfulCreate    job/descheduler-29035972                             Created pod: descheduler-29035972-dbqjb
+32m         Normal    Completed           job/descheduler-29035972                             Job completed
+30m         Normal    Scheduled           pod/descheduler-29035974-nvg8d                       Successfully assigned kube-system/descheduler-29035974-nvg8d to k8s-control-1
+30m         Normal    Pulled              pod/descheduler-29035974-nvg8d                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+30m         Normal    Created             pod/descheduler-29035974-nvg8d                       Created container: descheduler
+30m         Normal    Started             pod/descheduler-29035974-nvg8d                       Started container descheduler
+30m         Normal    SuccessfulCreate    job/descheduler-29035974                             Created pod: descheduler-29035974-nvg8d
+30m         Normal    Completed           job/descheduler-29035974                             Job completed
+26m         Warning   FailedScheduling    pod/descheduler-29035976-kq5kg                       0/1 nodes are available: 1 node(s) had untolerated taint {node.cilium.io/agent-not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+25m         Normal    Scheduled           pod/descheduler-29035976-kq5kg                       Successfully assigned kube-system/descheduler-29035976-kq5kg to k8s-control-1
+24m         Normal    Pulled              pod/descheduler-29035976-kq5kg                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+24m         Normal    Created             pod/descheduler-29035976-kq5kg                       Created container: descheduler
+24m         Normal    Started             pod/descheduler-29035976-kq5kg                       Started container descheduler
+26m         Normal    SuccessfulCreate    job/descheduler-29035976                             Created pod: descheduler-29035976-kq5kg
+23m         Normal    Completed           job/descheduler-29035976                             Job completed
+23m         Warning   FailedScheduling    pod/descheduler-29035980-jgzjd                       0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/descheduler-29035980-jgzjd                       0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/descheduler-29035980-jgzjd                       Successfully assigned kube-system/descheduler-29035980-jgzjd to k8s-control-1
+14m         Normal    Pulled              pod/descheduler-29035980-jgzjd                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+14m         Normal    Created             pod/descheduler-29035980-jgzjd                       Created container: descheduler
+14m         Normal    Started             pod/descheduler-29035980-jgzjd                       Started container descheduler
+23m         Normal    SuccessfulCreate    job/descheduler-29035980                             Created pod: descheduler-29035980-jgzjd
+14m         Normal    Completed           job/descheduler-29035980                             Job completed
+14m         Normal    Scheduled           pod/descheduler-29035988-498pb                       Successfully assigned kube-system/descheduler-29035988-498pb to k8s-control-1
+13m         Normal    Pulled              pod/descheduler-29035988-498pb                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+13m         Normal    Created             pod/descheduler-29035988-498pb                       Created container: descheduler
+13m         Normal    Started             pod/descheduler-29035988-498pb                       Started container descheduler
+14m         Normal    SuccessfulCreate    job/descheduler-29035988                             Created pod: descheduler-29035988-498pb
+13m         Normal    Completed           job/descheduler-29035988                             Job completed
+13m         Normal    Scheduled           pod/descheduler-29035990-zzw5m                       Successfully assigned kube-system/descheduler-29035990-zzw5m to k8s-control-1
+13m         Normal    Pulled              pod/descheduler-29035990-zzw5m                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+13m         Normal    Created             pod/descheduler-29035990-zzw5m                       Created container: descheduler
+13m         Normal    Started             pod/descheduler-29035990-zzw5m                       Started container descheduler
+13m         Normal    SuccessfulCreate    job/descheduler-29035990                             Created pod: descheduler-29035990-zzw5m
+13m         Normal    Completed           job/descheduler-29035990                             Job completed
+12m         Normal    Scheduled           pod/descheduler-29035992-8r256                       Successfully assigned kube-system/descheduler-29035992-8r256 to k8s-control-1
+12m         Normal    Pulled              pod/descheduler-29035992-8r256                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+12m         Normal    Created             pod/descheduler-29035992-8r256                       Created container: descheduler
+12m         Normal    Started             pod/descheduler-29035992-8r256                       Started container descheduler
+12m         Normal    SuccessfulCreate    job/descheduler-29035992                             Created pod: descheduler-29035992-8r256
+12m         Normal    Completed           job/descheduler-29035992                             Job completed
+10m         Normal    Scheduled           pod/descheduler-29035994-dkwnm                       Successfully assigned kube-system/descheduler-29035994-dkwnm to k8s-control-1
+10m         Normal    Pulled              pod/descheduler-29035994-dkwnm                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+10m         Normal    Created             pod/descheduler-29035994-dkwnm                       Created container: descheduler
+10m         Normal    Started             pod/descheduler-29035994-dkwnm                       Started container descheduler
+10m         Normal    SuccessfulCreate    job/descheduler-29035994                             Created pod: descheduler-29035994-dkwnm
+10m         Normal    Completed           job/descheduler-29035994                             Job completed
+8m5s        Normal    Scheduled           pod/descheduler-29035996-9xtz9                       Successfully assigned kube-system/descheduler-29035996-9xtz9 to k8s-control-1
+8m4s        Normal    Pulled              pod/descheduler-29035996-9xtz9                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+8m4s        Normal    Created             pod/descheduler-29035996-9xtz9                       Created container: descheduler
+8m4s        Normal    Started             pod/descheduler-29035996-9xtz9                       Started container descheduler
+8m5s        Normal    SuccessfulCreate    job/descheduler-29035996                             Created pod: descheduler-29035996-9xtz9
+8m          Normal    Completed           job/descheduler-29035996                             Job completed
+6m5s        Normal    Scheduled           pod/descheduler-29035998-b54rx                       Successfully assigned kube-system/descheduler-29035998-b54rx to k8s-control-1
+6m4s        Normal    Pulled              pod/descheduler-29035998-b54rx                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+6m4s        Normal    Created             pod/descheduler-29035998-b54rx                       Created container: descheduler
+6m3s        Normal    Started             pod/descheduler-29035998-b54rx                       Started container descheduler
+6m5s        Normal    SuccessfulCreate    job/descheduler-29035998                             Created pod: descheduler-29035998-b54rx
+6m          Normal    Completed           job/descheduler-29035998                             Job completed
+4m5s        Normal    Scheduled           pod/descheduler-29036000-v5d24                       Successfully assigned kube-system/descheduler-29036000-v5d24 to k8s-control-1
+4m4s        Normal    Pulled              pod/descheduler-29036000-v5d24                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+4m4s        Normal    Created             pod/descheduler-29036000-v5d24                       Created container: descheduler
+4m4s        Normal    Started             pod/descheduler-29036000-v5d24                       Started container descheduler
+4m5s        Normal    SuccessfulCreate    job/descheduler-29036000                             Created pod: descheduler-29036000-v5d24
+4m1s        Normal    Completed           job/descheduler-29036000                             Job completed
+2m5s        Normal    Scheduled           pod/descheduler-29036002-mzh4z                       Successfully assigned kube-system/descheduler-29036002-mzh4z to k8s-control-1
+2m4s        Normal    Pulled              pod/descheduler-29036002-mzh4z                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+2m4s        Normal    Created             pod/descheduler-29036002-mzh4z                       Created container: descheduler
+2m4s        Normal    Started             pod/descheduler-29036002-mzh4z                       Started container descheduler
+2m5s        Normal    SuccessfulCreate    job/descheduler-29036002                             Created pod: descheduler-29036002-mzh4z
+2m          Normal    Completed           job/descheduler-29036002                             Job completed
+5s          Normal    Scheduled           pod/descheduler-29036004-24bmw                       Successfully assigned kube-system/descheduler-29036004-24bmw to k8s-control-1
+4s          Normal    Pulled              pod/descheduler-29036004-24bmw                       Container image "registry.k8s.io/descheduler/descheduler:v0.31.0" already present on machine
+4s          Normal    Created             pod/descheduler-29036004-24bmw                       Created container: descheduler
+4s          Normal    Started             pod/descheduler-29036004-24bmw                       Started container descheduler
+5s          Normal    SuccessfulCreate    job/descheduler-29036004                             Created pod: descheduler-29036004-24bmw
+0s          Normal    Completed           job/descheduler-29036004                             Job completed
+82m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035922
+81m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035922, condition: Complete
+80m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035924
+78m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035924, condition: Complete
+78m         Normal    HelmChartCreated    helmrelease/descheduler                              Created HelmChart/flux-system/kube-system-descheduler with SourceRef 'HelmRepository/flux-system/truecharts'
+78m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035926
+77m         Normal    UpgradeSucceeded    helmrelease/descheduler                              Helm upgrade succeeded for release kube-system/descheduler.v2 with chart descheduler@0.1.0
+77m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035926, condition: Complete
+76m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035928
+75m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035922
+75m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035928, condition: Complete
+74m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035930
+74m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035924
+74m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035930, condition: Complete
+72m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035932
+72m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035926
+72m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035932, condition: Complete
+70m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035934
+70m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035928
+70m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035934, condition: Complete
+68m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035936
+68m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035930
+68m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035936, condition: Complete
+66m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035938
+66m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035932
+66m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035938, condition: Complete
+64m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035940
+64m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035934
+64m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035940, condition: Complete
+62m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035942
+62m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035936
+32m         Normal    SuccessfulCreate    cronjob/descheduler                                  (combined from similar events): Created job descheduler-29035972
+26m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035976
+26m         Normal    JobAlreadyActive    cronjob/descheduler                                  Not starting job because prior execution is running and concurrency policy is Forbid
+20m         Normal    JobAlreadyActive    cronjob/descheduler                                  Not starting job because prior execution is running and concurrency policy is Forbid
+23m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035970
+23m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035976, condition: Complete
+23m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035980
+13m         Normal    JobAlreadyActive    cronjob/descheduler                                  Not starting job because prior execution is running and concurrency policy is Forbid
+14m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035972
+14m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035980, condition: Complete
+14m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035988
+13m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035974
+13m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035988, condition: Complete
+13m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035990
+13m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035976
+13m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035990, condition: Complete
+12m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035992
+12m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035980
+12m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035992, condition: Complete
+10m         Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035994
+10m         Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035988
+10m         Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035994, condition: Complete
+8m5s        Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035996
+8m          Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035990
+8m          Normal    SawCompletedJob     cronjob/descheduler                                  Saw completed job: descheduler-29035996, condition: Complete
+6m5s        Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29035998
+6m          Normal    SuccessfulDelete    cronjob/descheduler                                  Deleted job descheduler-29035992
+4m5s        Normal    SuccessfulCreate    cronjob/descheduler                                  Created job descheduler-29036000
+27m         Normal    Pulled              pod/kube-apiserver-k8s-control-1                     Container image "registry.k8s.io/kube-apiserver:v1.32.1" already present on machine
+27m         Normal    Created             pod/kube-apiserver-k8s-control-1                     Created container: kube-apiserver
+27m         Normal    Started             pod/kube-apiserver-k8s-control-1                     Started container kube-apiserver
+15m         Normal    Pulled              pod/kube-apiserver-k8s-control-1                     Container image "registry.k8s.io/kube-apiserver:v1.32.1" already present on machine
+15m         Normal    Created             pod/kube-apiserver-k8s-control-1                     Created container: kube-apiserver
+15m         Normal    Started             pod/kube-apiserver-k8s-control-1                     Started container kube-apiserver
+79m         Normal    Created             pod/kube-controller-manager-k8s-control-1            Created container: kube-controller-manager
+79m         Normal    Started             pod/kube-controller-manager-k8s-control-1            Started container kube-controller-manager
+79m         Normal    Pulled              pod/kube-controller-manager-k8s-control-1            Container image "registry.k8s.io/kube-controller-manager:v1.32.1" already present on machine
+79m         Warning   BackOff             pod/kube-controller-manager-k8s-control-1            Back-off restarting failed container kube-controller-manager in pod kube-controller-manager-k8s-control-1_kube-system(94836fbe31805980e8c844112219bb41)
+79m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Liveness probe failed: Get "https://localhost:10257/healthz": dial tcp [::1]:10257: connect: connection refused
+24m         Normal    Pulled              pod/kube-controller-manager-k8s-control-1            Container image "registry.k8s.io/kube-controller-manager:v1.32.1" already present on machine
+23m         Normal    Created             pod/kube-controller-manager-k8s-control-1            Created container: kube-controller-manager
+23m         Normal    Started             pod/kube-controller-manager-k8s-control-1            Started container kube-controller-manager
+27m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Startup probe failed: Get "https://localhost:10257/healthz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+26m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Startup probe failed: Get "https://localhost:10257/healthz": context deadline exceeded
+27m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Startup probe failed: Get "https://localhost:10257/healthz": read tcp [::1]:56150->[::1]:10257: read: connection reset by peer
+24m         Warning   BackOff             pod/kube-controller-manager-k8s-control-1            Back-off restarting failed container kube-controller-manager in pod kube-controller-manager-k8s-control-1_kube-system(3cef7bd30ca8e7f53e60ea28707077f1)
+24m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Liveness probe failed: Get "https://localhost:10257/healthz": dial tcp [::1]:10257: connect: connection refused
+14m         Normal    Pulled              pod/kube-controller-manager-k8s-control-1            Container image "registry.k8s.io/kube-controller-manager:v1.32.1" already present on machine
+14m         Normal    Created             pod/kube-controller-manager-k8s-control-1            Created container: kube-controller-manager
+14m         Normal    Started             pod/kube-controller-manager-k8s-control-1            Started container kube-controller-manager
+15m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Startup probe failed: Get "https://localhost:10257/healthz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+15m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Startup probe failed: Get "https://localhost:10257/healthz": context deadline exceeded
+15m         Warning   Unhealthy           pod/kube-controller-manager-k8s-control-1            Startup probe failed: Get "https://localhost:10257/healthz": dial tcp [::1]:10257: connect: connection refused
+15m         Warning   BackOff             pod/kube-controller-manager-k8s-control-1            Back-off restarting failed container kube-controller-manager in pod kube-controller-manager-k8s-control-1_kube-system(1ce7ca18bd3fe93952e7724d9cc70fc8)
+86m         Normal    LeaderElection      lease/kube-controller-manager                        k8s-control-1_930c9b6d-73cf-4a58-8224-5f068ab2977d became leader
+78m         Normal    LeaderElection      lease/kube-controller-manager                        k8s-control-1_32d81933-a30b-433d-9a09-296963d34697 became leader
+26m         Normal    LeaderElection      lease/kube-controller-manager                        k8s-control-1_a34dc2b1-b6a4-4ce4-8560-f61ee1ce49b9 became leader
+23m         Normal    LeaderElection      lease/kube-controller-manager                        k8s-control-1_ee6c4111-7078-4383-b63a-6d9b12eb4208 became leader
+14m         Normal    LeaderElection      lease/kube-controller-manager                        k8s-control-1_a0e39b20-1512-4124-bd0d-7c3fb8ef8279 became leader
+41m         Normal    Created             pod/kube-scheduler-k8s-control-1                     Created container: kube-scheduler
+41m         Normal    Started             pod/kube-scheduler-k8s-control-1                     Started container kube-scheduler
+41m         Normal    Pulled              pod/kube-scheduler-k8s-control-1                     Container image "registry.k8s.io/kube-scheduler:v1.32.1" already present on machine
+79m         Warning   BackOff             pod/kube-scheduler-k8s-control-1                     Back-off restarting failed container kube-scheduler in pod kube-scheduler-k8s-control-1_kube-system(6dd71db8102837f13a7acb12deac3631)
+24m         Normal    Pulled              pod/kube-scheduler-k8s-control-1                     Container image "registry.k8s.io/kube-scheduler:v1.32.1" already present on machine
+23m         Normal    Created             pod/kube-scheduler-k8s-control-1                     Created container: kube-scheduler
+23m         Normal    Started             pod/kube-scheduler-k8s-control-1                     Started container kube-scheduler
+26m         Warning   Unhealthy           pod/kube-scheduler-k8s-control-1                     Startup probe failed: Get "https://localhost:10259/livez": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+24m         Warning   BackOff             pod/kube-scheduler-k8s-control-1                     Back-off restarting failed container kube-scheduler in pod kube-scheduler-k8s-control-1_kube-system(5c23bac16fc338511703c6bfe72f4799)
+24m         Warning   Unhealthy           pod/kube-scheduler-k8s-control-1                     Readiness probe failed: Get "https://localhost:10259/readyz": dial tcp [::1]:10259: connect: connection refused
+23m         Warning   Unhealthy           pod/kube-scheduler-k8s-control-1                     Startup probe failed: Get "https://localhost:10259/livez": dial tcp [::1]:10259: connect: connection refused
+14m         Normal    Pulled              pod/kube-scheduler-k8s-control-1                     Container image "registry.k8s.io/kube-scheduler:v1.32.1" already present on machine
+14m         Normal    Created             pod/kube-scheduler-k8s-control-1                     Created container: kube-scheduler
+14m         Normal    Started             pod/kube-scheduler-k8s-control-1                     Started container kube-scheduler
+15m         Warning   Unhealthy           pod/kube-scheduler-k8s-control-1                     Startup probe failed: Get "https://localhost:10259/livez": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+15m         Warning   BackOff             pod/kube-scheduler-k8s-control-1                     Back-off restarting failed container kube-scheduler in pod kube-scheduler-k8s-control-1_kube-system(d49d54496b8184cb625df9580067c0cc)
+86m         Normal    LeaderElection      lease/kube-scheduler                                 k8s-control-1_4b5e633a-8a44-43dc-91e9-4eb3bac35c74 became leader
+78m         Normal    LeaderElection      lease/kube-scheduler                                 k8s-control-1_7e04ff60-9df3-4b3f-b72c-15787ad97aa2 became leader
+41m         Normal    LeaderElection      lease/kube-scheduler                                 k8s-control-1_27dfa214-a891-4e8a-b017-98a48dea5d71 became leader
+26m         Normal    LeaderElection      lease/kube-scheduler                                 k8s-control-1_83786275-26f8-42c3-b8a0-a73c5c565ac8 became leader
+23m         Normal    LeaderElection      lease/kube-scheduler                                 k8s-control-1_a7a25d11-6846-41f3-95d2-5a3d2c842d68 became leader
+14m         Normal    LeaderElection      lease/kube-scheduler                                 k8s-control-1_c3c2768b-652b-479d-a85a-8d72bd66ebd3 became leader
+86m         Warning   FailedScheduling    pod/kubelet-csr-approver-6647f699d7-92xc5            0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+84m         Normal    Scheduled           pod/kubelet-csr-approver-6647f699d7-92xc5            Successfully assigned kube-system/kubelet-csr-approver-6647f699d7-92xc5 to k8s-control-1
+84m         Normal    Pulling             pod/kubelet-csr-approver-6647f699d7-92xc5            Pulling image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5"
+84m         Normal    Pulled              pod/kubelet-csr-approver-6647f699d7-92xc5            Successfully pulled image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" in 13.009s (13.009s including waiting). Image size: 30511901 bytes.
+79m         Normal    Created             pod/kubelet-csr-approver-6647f699d7-92xc5            Created container: kubelet-csr-approver
+79m         Normal    Started             pod/kubelet-csr-approver-6647f699d7-92xc5            Started container kubelet-csr-approver
+79m         Warning   Unhealthy           pod/kubelet-csr-approver-6647f699d7-92xc5            Readiness probe failed: Get "http://172.16.0.30:8081/healthz": dial tcp 172.16.0.30:8081: connect: connection refused
+79m         Warning   Unhealthy           pod/kubelet-csr-approver-6647f699d7-92xc5            Liveness probe failed: Get "http://172.16.0.30:8081/healthz": dial tcp 172.16.0.30:8081: connect: connection refused
+79m         Normal    Pulled              pod/kubelet-csr-approver-6647f699d7-92xc5            Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+76m         Normal    Killing             pod/kubelet-csr-approver-6647f699d7-92xc5            Stopping container kubelet-csr-approver
+86m         Warning   FailedScheduling    pod/kubelet-csr-approver-6647f699d7-grwv6            0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+84m         Normal    Scheduled           pod/kubelet-csr-approver-6647f699d7-grwv6            Successfully assigned kube-system/kubelet-csr-approver-6647f699d7-grwv6 to k8s-control-1
+84m         Normal    Pulling             pod/kubelet-csr-approver-6647f699d7-grwv6            Pulling image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5"
+84m         Normal    Pulled              pod/kubelet-csr-approver-6647f699d7-grwv6            Successfully pulled image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" in 13.224s (13.225s including waiting). Image size: 30511901 bytes.
+84m         Normal    Created             pod/kubelet-csr-approver-6647f699d7-grwv6            Created container: kubelet-csr-approver
+84m         Normal    Started             pod/kubelet-csr-approver-6647f699d7-grwv6            Started container kubelet-csr-approver
+76m         Normal    Killing             pod/kubelet-csr-approver-6647f699d7-grwv6            Stopping container kubelet-csr-approver
+86m         Warning   FailedScheduling    pod/kubelet-csr-approver-6647f699d7-h4x88            0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+84m         Normal    Scheduled           pod/kubelet-csr-approver-6647f699d7-h4x88            Successfully assigned kube-system/kubelet-csr-approver-6647f699d7-h4x88 to k8s-control-1
+84m         Normal    Pulling             pod/kubelet-csr-approver-6647f699d7-h4x88            Pulling image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5"
+84m         Normal    Pulled              pod/kubelet-csr-approver-6647f699d7-h4x88            Successfully pulled image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" in 13.292s (13.292s including waiting). Image size: 30511901 bytes.
+84m         Normal    Created             pod/kubelet-csr-approver-6647f699d7-h4x88            Created container: kubelet-csr-approver
+84m         Normal    Started             pod/kubelet-csr-approver-6647f699d7-h4x88            Started container kubelet-csr-approver
+76m         Normal    Killing             pod/kubelet-csr-approver-6647f699d7-h4x88            Stopping container kubelet-csr-approver
+86m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-6647f699d7           Created pod: kubelet-csr-approver-6647f699d7-grwv6
+86m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-6647f699d7           Created pod: kubelet-csr-approver-6647f699d7-92xc5
+86m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-6647f699d7           Created pod: kubelet-csr-approver-6647f699d7-h4x88
+76m         Normal    SuccessfulDelete    replicaset/kubelet-csr-approver-6647f699d7           Deleted pod: kubelet-csr-approver-6647f699d7-grwv6
+76m         Normal    SuccessfulDelete    replicaset/kubelet-csr-approver-6647f699d7           Deleted pod: kubelet-csr-approver-6647f699d7-h4x88
+76m         Normal    SuccessfulDelete    replicaset/kubelet-csr-approver-6647f699d7           Deleted pod: kubelet-csr-approver-6647f699d7-92xc5
+23m         Warning   FailedScheduling    pod/kubelet-csr-approver-7c95c665d-gtk85             0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/kubelet-csr-approver-7c95c665d-gtk85             0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/kubelet-csr-approver-7c95c665d-gtk85             Successfully assigned kube-system/kubelet-csr-approver-7c95c665d-gtk85 to k8s-control-1
+13m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-gtk85             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+13m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-gtk85             Created container: kubelet-csr-approver
+13m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-gtk85             Started container kubelet-csr-approver
+76m         Normal    Scheduled           pod/kubelet-csr-approver-7c95c665d-ntr48             Successfully assigned kube-system/kubelet-csr-approver-7c95c665d-ntr48 to k8s-control-1
+76m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-ntr48             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+76m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-ntr48             Created container: kubelet-csr-approver
+76m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-ntr48             Started container kubelet-csr-approver
+26m         Normal    SandboxChanged      pod/kubelet-csr-approver-7c95c665d-ntr48             Pod sandbox changed, it will be killed and re-created.
+25m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-ntr48             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+25m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-ntr48             Created container: kubelet-csr-approver
+25m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-ntr48             Started container kubelet-csr-approver
+23m         Normal    Killing             pod/kubelet-csr-approver-7c95c665d-ntr48             Stopping container kubelet-csr-approver
+76m         Normal    Scheduled           pod/kubelet-csr-approver-7c95c665d-q5bvl             Successfully assigned kube-system/kubelet-csr-approver-7c95c665d-q5bvl to k8s-control-1
+76m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-q5bvl             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+76m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-q5bvl             Created container: kubelet-csr-approver
+76m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-q5bvl             Started container kubelet-csr-approver
+26m         Normal    SandboxChanged      pod/kubelet-csr-approver-7c95c665d-q5bvl             Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-q5bvl             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+23m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-q5bvl             Created container: kubelet-csr-approver
+23m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-q5bvl             Started container kubelet-csr-approver
+24m         Warning   Unhealthy           pod/kubelet-csr-approver-7c95c665d-q5bvl             Liveness probe failed: Get "http://172.16.0.150:8081/healthz": dial tcp 172.16.0.150:8081: connect: connection refused
+24m         Warning   BackOff             pod/kubelet-csr-approver-7c95c665d-q5bvl             Back-off restarting failed container kubelet-csr-approver in pod kubelet-csr-approver-7c95c665d-q5bvl_kube-system(ace7bb63-60c7-4fbf-b0da-bc6b74550de0)
+23m         Normal    Killing             pod/kubelet-csr-approver-7c95c665d-q5bvl             Stopping container kubelet-csr-approver
+76m         Normal    Scheduled           pod/kubelet-csr-approver-7c95c665d-svz44             Successfully assigned kube-system/kubelet-csr-approver-7c95c665d-svz44 to k8s-control-1
+76m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-svz44             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+76m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-svz44             Created container: kubelet-csr-approver
+76m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-svz44             Started container kubelet-csr-approver
+26m         Normal    SandboxChanged      pod/kubelet-csr-approver-7c95c665d-svz44             Pod sandbox changed, it will be killed and re-created.
+25m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-svz44             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+25m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-svz44             Created container: kubelet-csr-approver
+25m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-svz44             Started container kubelet-csr-approver
+23m         Normal    Killing             pod/kubelet-csr-approver-7c95c665d-svz44             Stopping container kubelet-csr-approver
+23m         Warning   FailedScheduling    pod/kubelet-csr-approver-7c95c665d-szgkg             0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/kubelet-csr-approver-7c95c665d-szgkg             0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/kubelet-csr-approver-7c95c665d-szgkg             Successfully assigned kube-system/kubelet-csr-approver-7c95c665d-szgkg to k8s-control-1
+13m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-szgkg             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+13m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-szgkg             Created container: kubelet-csr-approver
+13m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-szgkg             Started container kubelet-csr-approver
+23m         Warning   FailedScheduling    pod/kubelet-csr-approver-7c95c665d-w45bd             0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/kubelet-csr-approver-7c95c665d-w45bd             0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/kubelet-csr-approver-7c95c665d-w45bd             Successfully assigned kube-system/kubelet-csr-approver-7c95c665d-w45bd to k8s-control-1
+13m         Normal    Pulled              pod/kubelet-csr-approver-7c95c665d-w45bd             Container image "ghcr.io/postfinance/kubelet-csr-approver:v1.2.5" already present on machine
+13m         Normal    Created             pod/kubelet-csr-approver-7c95c665d-w45bd             Created container: kubelet-csr-approver
+13m         Normal    Started             pod/kubelet-csr-approver-7c95c665d-w45bd             Started container kubelet-csr-approver
+76m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-7c95c665d            Created pod: kubelet-csr-approver-7c95c665d-ntr48
+76m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-7c95c665d            Created pod: kubelet-csr-approver-7c95c665d-svz44
+76m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-7c95c665d            Created pod: kubelet-csr-approver-7c95c665d-q5bvl
+23m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-7c95c665d            Created pod: kubelet-csr-approver-7c95c665d-w45bd
+23m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-7c95c665d            Created pod: kubelet-csr-approver-7c95c665d-gtk85
+23m         Normal    SuccessfulCreate    replicaset/kubelet-csr-approver-7c95c665d            Created pod: kubelet-csr-approver-7c95c665d-szgkg
+86m         Normal    ScalingReplicaSet   deployment/kubelet-csr-approver                      Scaled up replica set kubelet-csr-approver-6647f699d7 from 0 to 3
+84m         Normal    LeaderElection      lease/kubelet-csr-approver                           kubelet-csr-approver-6647f699d7-92xc5_b00b9f2d-8f6e-43a7-85f8-5ea8c1aeb44e became leader
+79m         Normal    LeaderElection      lease/kubelet-csr-approver                           kubelet-csr-approver-6647f699d7-h4x88_bff99d5d-fa10-46f5-a386-f8911d929a39 became leader
+78m         Normal    HelmChartCreated    helmrelease/kubelet-csr-approver                     Created HelmChart/flux-system/kube-system-kubelet-csr-approver with SourceRef 'HelmRepository/flux-system/truecharts'
+76m         Normal    ScalingReplicaSet   deployment/kubelet-csr-approver                      Scaled down replica set kubelet-csr-approver-6647f699d7 from 3 to 0
+76m         Normal    ScalingReplicaSet   deployment/kubelet-csr-approver                      Scaled up replica set kubelet-csr-approver-7c95c665d from 0 to 3
+76m         Normal    LeaderElection      lease/kubelet-csr-approver                           kubelet-csr-approver-7c95c665d-ntr48_6e59ed1d-c829-4e96-9484-cdbd9713a181 became leader
+75m         Normal    UpgradeSucceeded    helmrelease/kubelet-csr-approver                     Helm upgrade succeeded for release kube-system/kubelet-csr-approver.v2 with chart kubelet-csr-approver@1.4.1
+25m         Normal    LeaderElection      lease/kubelet-csr-approver                           kubelet-csr-approver-7c95c665d-q5bvl_294d0674-96e8-4e0e-8d23-5339458b825a became leader
+24m         Normal    LeaderElection      lease/kubelet-csr-approver                           kubelet-csr-approver-7c95c665d-svz44_aff07f9b-1913-4441-a4ad-3b97cb9a33be became leader
+13m         Normal    LeaderElection      lease/kubelet-csr-approver                           kubelet-csr-approver-7c95c665d-gtk85_26c9e947-1af7-4fde-8034-709f04295f1e became leader
+23m         Warning   FailedScheduling    pod/metrics-server-59b569559b-ckwxq                  0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/metrics-server-59b569559b-ckwxq                  0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/metrics-server-59b569559b-ckwxq                  Successfully assigned kube-system/metrics-server-59b569559b-ckwxq to k8s-control-1
+13m         Normal    Pulled              pod/metrics-server-59b569559b-ckwxq                  Container image "registry.k8s.io/metrics-server/metrics-server:v0.7.1" already present on machine
+13m         Normal    Created             pod/metrics-server-59b569559b-ckwxq                  Created container: metrics-server
+13m         Normal    Started             pod/metrics-server-59b569559b-ckwxq                  Started container metrics-server
+83m         Normal    Scheduled           pod/metrics-server-59b569559b-hql7l                  Successfully assigned kube-system/metrics-server-59b569559b-hql7l to k8s-control-1
+83m         Normal    Pulling             pod/metrics-server-59b569559b-hql7l                  Pulling image "registry.k8s.io/metrics-server/metrics-server:v0.7.1"
+82m         Normal    Pulled              pod/metrics-server-59b569559b-hql7l                  Successfully pulled image "registry.k8s.io/metrics-server/metrics-server:v0.7.1" in 37.602s (37.602s including waiting). Image size: 19478031 bytes.
+82m         Normal    Created             pod/metrics-server-59b569559b-hql7l                  Created container: metrics-server
+82m         Normal    Started             pod/metrics-server-59b569559b-hql7l                  Started container metrics-server
+79m         Warning   Unhealthy           pod/metrics-server-59b569559b-hql7l                  Readiness probe failed: HTTP probe failed with statuscode: 500
+26m         Normal    SandboxChanged      pod/metrics-server-59b569559b-hql7l                  Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/metrics-server-59b569559b-hql7l                  Container image "registry.k8s.io/metrics-server/metrics-server:v0.7.1" already present on machine
+24m         Normal    Created             pod/metrics-server-59b569559b-hql7l                  Created container: metrics-server
+24m         Normal    Started             pod/metrics-server-59b569559b-hql7l                  Started container metrics-server
+24m         Warning   Unhealthy           pod/metrics-server-59b569559b-hql7l                  Liveness probe failed: Get "https://172.16.0.131:10250/livez": dial tcp 172.16.0.131:10250: connect: connection refused
+24m         Warning   Unhealthy           pod/metrics-server-59b569559b-hql7l                  Liveness probe failed: Get "https://172.16.0.131:10250/livez": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+23m         Normal    Killing             pod/metrics-server-59b569559b-hql7l                  Stopping container metrics-server
+83m         Normal    SuccessfulCreate    replicaset/metrics-server-59b569559b                 Created pod: metrics-server-59b569559b-hql7l
+23m         Normal    SuccessfulCreate    replicaset/metrics-server-59b569559b                 Created pod: metrics-server-59b569559b-ckwxq
+83m         Normal    ScalingReplicaSet   deployment/metrics-server                            Scaled up replica set metrics-server-59b569559b from 0 to 1
+78m         Normal    HelmChartCreated    helmrelease/metrics-server                           Created HelmChart/flux-system/kube-system-metrics-server with SourceRef 'HelmRepository/flux-system/truecharts'
+76m         Normal    HelmChartSyncErr    helmrelease/metrics-server                           failed to run server-side apply: HelmChart/flux-system/kube-system-metrics-server dry-run failed: context canceled
+76m         Normal    UpgradeSucceeded    helmrelease/metrics-server                           Helm upgrade succeeded for release kube-system/metrics-server.v2 with chart metrics-server@0.1.0
+83m         Normal    Scheduled           pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Successfully assigned kube-system/node-feature-discovery-gc-6dc5f85664-2zzm5 to k8s-control-1
+83m         Normal    Pulling             pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Pulling image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4"
+82m         Normal    Pulled              pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Successfully pulled image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" in 55.928s (55.928s including waiting). Image size: 69404735 bytes.
+82m         Normal    Created             pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Created container: gc
+82m         Normal    Started             pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Started container gc
+26m         Normal    SandboxChanged      pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Container image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" already present on machine
+24m         Normal    Created             pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Created container: gc
+24m         Normal    Started             pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Started container gc
+23m         Normal    Killing             pod/node-feature-discovery-gc-6dc5f85664-2zzm5       Stopping container gc
+23m         Warning   FailedScheduling    pod/node-feature-discovery-gc-6dc5f85664-lhbks       0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/node-feature-discovery-gc-6dc5f85664-lhbks       0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/node-feature-discovery-gc-6dc5f85664-lhbks       Successfully assigned kube-system/node-feature-discovery-gc-6dc5f85664-lhbks to k8s-control-1
+14m         Normal    Pulled              pod/node-feature-discovery-gc-6dc5f85664-lhbks       Container image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" already present on machine
+14m         Normal    Created             pod/node-feature-discovery-gc-6dc5f85664-lhbks       Created container: gc
+14m         Normal    Started             pod/node-feature-discovery-gc-6dc5f85664-lhbks       Started container gc
+83m         Normal    SuccessfulCreate    replicaset/node-feature-discovery-gc-6dc5f85664      Created pod: node-feature-discovery-gc-6dc5f85664-2zzm5
+23m         Normal    SuccessfulCreate    replicaset/node-feature-discovery-gc-6dc5f85664      Created pod: node-feature-discovery-gc-6dc5f85664-lhbks
+83m         Normal    ScalingReplicaSet   deployment/node-feature-discovery-gc                 Scaled up replica set node-feature-discovery-gc-6dc5f85664 from 0 to 1
+83m         Normal    Scheduled           pod/node-feature-discovery-master-8f98b5b45-74hs2    Successfully assigned kube-system/node-feature-discovery-master-8f98b5b45-74hs2 to k8s-control-1
+83m         Normal    Pulling             pod/node-feature-discovery-master-8f98b5b45-74hs2    Pulling image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4"
+82m         Normal    Pulled              pod/node-feature-discovery-master-8f98b5b45-74hs2    Successfully pulled image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" in 55.523s (55.523s including waiting). Image size: 69404735 bytes.
+82m         Normal    Created             pod/node-feature-discovery-master-8f98b5b45-74hs2    Created container: master
+82m         Normal    Started             pod/node-feature-discovery-master-8f98b5b45-74hs2    Started container master
+26m         Normal    SandboxChanged      pod/node-feature-discovery-master-8f98b5b45-74hs2    Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/node-feature-discovery-master-8f98b5b45-74hs2    Container image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" already present on machine
+24m         Normal    Created             pod/node-feature-discovery-master-8f98b5b45-74hs2    Created container: master
+23m         Normal    Started             pod/node-feature-discovery-master-8f98b5b45-74hs2    Started container master
+23m         Normal    Killing             pod/node-feature-discovery-master-8f98b5b45-74hs2    Stopping container master
+23m         Warning   FailedScheduling    pod/node-feature-discovery-master-8f98b5b45-pr9vx    0/1 nodes are available: 1 node(s) were unschedulable. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Warning   FailedScheduling    pod/node-feature-discovery-master-8f98b5b45-pr9vx    0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/unschedulable: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+14m         Normal    Scheduled           pod/node-feature-discovery-master-8f98b5b45-pr9vx    Successfully assigned kube-system/node-feature-discovery-master-8f98b5b45-pr9vx to k8s-control-1
+13m         Normal    Pulled              pod/node-feature-discovery-master-8f98b5b45-pr9vx    Container image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" already present on machine
+13m         Normal    Created             pod/node-feature-discovery-master-8f98b5b45-pr9vx    Created container: master
+13m         Normal    Started             pod/node-feature-discovery-master-8f98b5b45-pr9vx    Started container master
+83m         Normal    SuccessfulCreate    replicaset/node-feature-discovery-master-8f98b5b45   Created pod: node-feature-discovery-master-8f98b5b45-74hs2
+23m         Normal    SuccessfulCreate    replicaset/node-feature-discovery-master-8f98b5b45   Created pod: node-feature-discovery-master-8f98b5b45-pr9vx
+83m         Normal    ScalingReplicaSet   deployment/node-feature-discovery-master             Scaled up replica set node-feature-discovery-master-8f98b5b45 from 0 to 1
+83m         Normal    Scheduled           pod/node-feature-discovery-worker-hbx64              Successfully assigned kube-system/node-feature-discovery-worker-hbx64 to k8s-control-1
+83m         Normal    Pulling             pod/node-feature-discovery-worker-hbx64              Pulling image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4"
+82m         Normal    Pulled              pod/node-feature-discovery-worker-hbx64              Successfully pulled image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" in 55.067s (55.067s including waiting). Image size: 69404735 bytes.
+82m         Normal    Created             pod/node-feature-discovery-worker-hbx64              Created container: worker
+82m         Normal    Started             pod/node-feature-discovery-worker-hbx64              Started container worker
+26m         Normal    SandboxChanged      pod/node-feature-discovery-worker-hbx64              Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled              pod/node-feature-discovery-worker-hbx64              Container image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" already present on machine
+24m         Normal    Created             pod/node-feature-discovery-worker-hbx64              Created container: worker
+24m         Normal    Started             pod/node-feature-discovery-worker-hbx64              Started container worker
+24m         Warning   Unhealthy           pod/node-feature-discovery-worker-hbx64              Readiness probe failed: timeout: failed to connect service "172.16.0.23:8082" within 1s: context deadline exceeded
+24m         Warning   Unhealthy           pod/node-feature-discovery-worker-hbx64              Liveness probe failed: timeout: failed to connect service "172.16.0.23:8082" within 1s: context deadline exceeded
+14m         Normal    Pulled              pod/node-feature-discovery-worker-hbx64              Container image "registry.k8s.io/nfd/node-feature-discovery:v0.16.4" already present on machine
+14m         Normal    Created             pod/node-feature-discovery-worker-hbx64              Created container: worker
+14m         Normal    Started             pod/node-feature-discovery-worker-hbx64              Started container worker
+83m         Normal    SuccessfulCreate    daemonset/node-feature-discovery-worker              Created pod: node-feature-discovery-worker-hbx64
+78m         Normal    HelmChartCreated    helmrelease/node-feature-discovery                   Created HelmChart/flux-system/kube-system-node-feature-discovery with SourceRef 'HelmRepository/flux-system/truecharts'
+76m         Normal    UpgradeSucceeded    helmrelease/node-feature-discovery                   Helm upgrade succeeded for release kube-system/node-feature-discovery.v2 with chart node-feature-discovery@0.1.0
