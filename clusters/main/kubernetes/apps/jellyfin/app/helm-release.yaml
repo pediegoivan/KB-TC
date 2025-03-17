@@ -26,10 +26,19 @@ spec:
         ports:
           main:
             port: 8096
-    persistance:
-      media:
-        enabled: true
-        type: nfs
-        path: /mnt/HomeNas/SMBShare #${MEDIA_SHARE}
-        server: 192.168.0.2 #${TRUENAS_IP}
-        mountPath: /media
+    persistence:
+      smb-vol:
+        type: pvc
+        static:
+          mode: smb
+          user: ${SMB_USER}
+          password: ${SMB_PASS}
+          share: ${SMB_SHARE}
+          server: ${SMB_SERVER}
+#    persistance:
+#      media:
+#        enabled: true
+#        type: nfs
+#        path: /mnt/HomeNas/SMBShare #${MEDIA_SHARE}
+#        server: 192.168.0.2 #${TRUENAS_IP}
+#        mountPath: /media

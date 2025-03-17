@@ -30,6 +30,6 @@ spec:
       media:
         enabled: true
         type: nfs
-        server: 192.168.0.2
-        path: /mnt/HomeNas/SMBShare
+        server: ${TRUENAS_IP}
+        path: ${MEDIA_SHARE}
         mountPath: /media
