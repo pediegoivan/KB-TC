@@ -4,31 +4,32 @@ metadata:
     name: jellyfin
     namespace: jellyfin
 spec:
-    interval: 15m
-    chart:
-        spec:
-            # renovate: registryUrl=https://charts.truechartsoci.org
-            chart: jellyfin
-            version: 20.6.13
-            sourceRef:
-                kind: HelmRepository
-                name: truecharts
-                namespace: flux-system
-            interval: 5m
-    maxHistory: 3
-    values:
-      service:
-        main:
-          type: LoadBalancer
-          loadBalancerIP: ${JELLYFIN_IP}
-          ports:
-            main:
-              port: 8096
-              targetPort: 8096
-      persistance:
-        media:
-          enabled: true
-          type: nfs
-          path: /mnt/HomeNas/SMBShare #${MEDIA_SHARE}
-          server: 192.168.0.2 #${TRUENAS_IP}
-          mountPath: /media
+  interval: 15m
+  chart:
+    spec:
+      chart: jellyfin
+      version: 20.6.13
+      sourceRef:
+        kind: HelmRepository
+        name: truecharts
+        namespace: flux-system
+      interval: 5m
+  values:
+    jellyfin:
+      serverIP: 192.168.0.16
+      disableGDM: true
+      requireHTTPS: false
+    service:
+      main:
+        type: LoadBalancer
+        loadBalancerIP: ${JELLYFIN_IP}
+        ports:
+          main:
+            port: 8096
+    persistance:
+      media:
+        enabled: true
+        type: nfs
+        path: /mnt/HomeNas/SMBShare #${MEDIA_SHARE}
+        server: 192.168.0.2 #${TRUENAS_IP}
+        mountPath: /media
