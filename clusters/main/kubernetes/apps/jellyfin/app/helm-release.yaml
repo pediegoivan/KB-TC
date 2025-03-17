@@ -33,7 +33,7 @@ spec:
         mountPath: /media
         static:
           mode: smb
-          user: ${SMB_USER}
+          username: ${SMB_USER}
           password: ${SMB_PASS}
           share: ${SMB_SHARE}
           server: ${SMB_SERVER}
