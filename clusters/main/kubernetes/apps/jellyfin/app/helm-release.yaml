@@ -34,7 +34,7 @@ spec:
           mode: nfs
           server: ${TRUENAS_IP}
           share: ${MEDIA_SHARE}
-          mountPath: /media
+        mountPath: /media
 #    persistence:
 #      smb-vol:
 #        enabled: true
