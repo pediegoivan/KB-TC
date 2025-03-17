@@ -50,7 +50,10 @@ spec:
       persistance:
         config:
           enabled: true
-          existingClaim: media-nfs-pvc
+          type: nfs
+          path: ${MEDIA_SHARE}
+          server: ${TRUENAS_IP}
+          #existingClaim: media-nfs-pvc
           mountPath: /Media
       workload:
         main:
