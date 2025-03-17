@@ -55,6 +55,17 @@ spec:
           server: ${TRUENAS_IP}
           #existingClaim: media-nfs-pvc
           mountPath: /Media
+        config:
+          enabled: true
+          mountPath: "/config"
+        cache:
+          enabled: true
+          mountPath: "/cache"
+          type: "emptyDir"
+        transcode:
+          enabled: true
+          mountPath: "/config/transcodes"
+          type: "emptyDir"
       workload:
         main:
           podSpec:
