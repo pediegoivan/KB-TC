@@ -48,7 +48,7 @@ spec:
               port: 8096
               targetPort: 8096
       persistance:
-        config:
+        media:
           enabled: true
           type: nfs
           path: ${MEDIA_SHARE}
