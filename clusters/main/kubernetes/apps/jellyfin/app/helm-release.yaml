@@ -1,0 +1,84 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+    name: jellyfin
+    namespace: jellyfin
+spec:
+    interval: 15m
+    chart:
+        spec:
+            # renovate: registryUrl=https://charts.truechartsoci.org
+            chart: jellyfin
+            version: 20.6.13
+            sourceRef:
+                kind: HelmRepository
+                name: truecharts
+                namespace: flux-system
+            interval: 5m
+    maxHistory: 3
+    install:
+        createNamespace: true
+        crds: CreateReplace
+        remediation:
+            retries: 3
+    upgrade:
+        crds: CreateReplace
+        cleanupOnFail: true
+        remediation:
+            retries: 3
+    uninstall:
+      keepHistory: false
+    timeout: 20m
+    values:
+      portal:
+        open:
+          enabled: false
+      global:
+        stopAll: false
+      #jellyfin:
+        #serverIP: ${JELLYFIN_IP}
+        #disableGDM: true
+        #requireHTTPS: false
+      service:
+        main:
+          type: LoadBalancer
+          loadBalancerIP: ${JELLYFIN_IP}
+          ports:
+            main:
+              port: 8096
+              targetPort: 8096
+      persistance:
+        media:
+          enabled: true
+          type: nfs
+          path: /mnt/HomeNas/SMBShare #${MEDIA_SHARE}
+          server: 192.168.0.2 #${TRUENAS_IP}
+          mountPath: /media
+          #type: pvc
+          #static:
+          #  mode: smb
+          #  user: ${SMB_USER}
+          #  password: ${SMB_PASS}
+          #  share: ${SMB_SHARE}
+          #  server: ${SMB_SERVER}
+          #  mountPath: /Media
+        config:
+          enabled: true
+          mountPath: "/config"
+        cache:
+          enabled: true
+          mountPath: "/cache"
+          type: "emptyDir"
+        transcode:
+          enabled: true
+          mountPath: "/config/transcodes"
+          type: "emptyDir"
+      workload:
+        main:
+          podSpec:
+            containers:
+              main:
+                env:
+                  JELLYFIN_PublishedServerUrl: "{{ $.Values.chartContext.appUrl }}"
+      autodiscovery:
+        enabled: true
