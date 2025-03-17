@@ -51,8 +51,8 @@ spec:
         media:
           enabled: true
           type: nfs
-          path: ${MEDIA_SHARE}
-          server: ${TRUENAS_IP}
+          path: /mnt/HomeNas/SMBShare #${MEDIA_SHARE}
+          server: 192.168.0.2 #${TRUENAS_IP}
           mountPath: /media
           #type: pvc
           #static:
