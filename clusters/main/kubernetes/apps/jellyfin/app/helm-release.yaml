@@ -30,6 +30,7 @@ spec:
       smb-vol:
         enabled: true
         type: pvc
+        mountPath: /media
         static:
           mode: smb
           user: ${SMB_USER}
