@@ -49,12 +49,19 @@ spec:
               targetPort: 8096
       persistance:
         media:
-          enabled: true
-          type: nfs
-          path: ${MEDIA_SHARE}
-          server: ${TRUENAS_IP}
+          type: pvc
+          static:
+            mode: smb
+            user: ${SMB_USER}
+            password: ${SMB_PASS}
+            share: ${SMB_SHARE}
+            server: ${SMB_SERVER}
+          #enabled: true
+          #type: nfs
+          #path: ${MEDIA_SHARE}
+          #server: ${TRUENAS_IP}
           #existingClaim: media-nfs-pvc
-          mountPath: /Media
+          #mountPath: /Media
         config:
           enabled: true
           mountPath: "/config"
