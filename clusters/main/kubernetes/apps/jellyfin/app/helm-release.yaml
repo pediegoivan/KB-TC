@@ -28,6 +28,7 @@ spec:
             port: 8096
     persistence:
       nfs-vol:
+        enabled: true
         type: pvc
         static:
           mode: nfs
