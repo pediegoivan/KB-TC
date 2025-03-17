@@ -56,6 +56,7 @@ spec:
             password: ${SMB_PASS}
             share: ${SMB_SHARE}
             server: ${SMB_SERVER}
+            mountPath: /Media
           #enabled: true
           #type: nfs
           #path: ${MEDIA_SHARE}
