@@ -53,7 +53,7 @@ spec:
           type: nfs
           path: ${MEDIA_SHARE}
           server: ${TRUENAS_IP}
-          mountPath: /Media
+          mountPath: /media
           #type: pvc
           #static:
           #  mode: smb
