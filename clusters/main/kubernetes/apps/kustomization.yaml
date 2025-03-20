@@ -4,4 +4,4 @@ resources:
   - kubernetes-dashboard/ks.yaml
   - jellyfin/ks.yaml
   - openspeedtest/ks.yaml
-  - plex/ks.yaml
+  
