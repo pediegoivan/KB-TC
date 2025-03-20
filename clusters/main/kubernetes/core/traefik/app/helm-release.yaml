@@ -68,7 +68,7 @@ spec:
         enabled: true
         ingressClassName: ""
         hosts:
-          - host: tk.${DOMAIN_2}
+          - host: tk.${DOMAIN_0}
             paths:
               - path: /
                 pathType: Prefix
