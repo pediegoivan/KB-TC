@@ -68,18 +68,18 @@ spec:
         enabled: true
         ingressClassName: ""
         hosts:
-          - host: traefik.${DOMAIN_2}
+          - host: tk.${DOMAIN_2}
             paths:
               - path: /
                 pathType: Prefix
         integrations:
           traefik:
             enabled: true
-            middlewares:
-              - name: local
-                namespace: traefik
-              - name: traefik-dash
-                namespace: traefik
+            #middlewares:
+            #  - name: local
+            #    namespace: traefik
+            #  - name: traefik-dash
+            #    namespace: traefik
           certManager:
             enabled: true
             certificateIssuer: general-le-prod  
