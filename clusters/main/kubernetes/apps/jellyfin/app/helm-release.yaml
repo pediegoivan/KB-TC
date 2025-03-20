@@ -34,3 +34,20 @@ spec:
         server: ${TRUENAS_IP}
         path: ${MEDIA_SHARE}
         mountPath: /media
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: # "external"
+        hosts:
+          - host: jf.${DOMAIN_0}
+            paths:
+              - path: /
+                pathType: Prefix
+        integrations:
+          traefik:
+            enabled: true
+          homepage:
+            enabled: true
+          certManager:
+            enabled: true
+            certificateIssuer: domain-0-le-prod

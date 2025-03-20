@@ -82,7 +82,7 @@ spec:
             #    namespace: traefik
           certManager:
             enabled: true
-            certificateIssuer: general-le-prod  
+            certificateIssuer: domain-0-le-prod
           homepage:
             enabled: true
 
