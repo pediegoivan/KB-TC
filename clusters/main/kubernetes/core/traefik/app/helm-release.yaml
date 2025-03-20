@@ -85,7 +85,6 @@ spec:
             certificateIssuer: general-le-prod  
           homepage:
             enabled: true
-            group: "Networking"
 
     middlewares:
       #ipWhiteList:
