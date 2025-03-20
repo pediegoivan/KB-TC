@@ -38,3 +38,66 @@ spec:
     service:
       tcp:
         loadBalancerIP: ${TRAEFIK_IP}
+        externalTrafficPolicy: Local
+        ports:
+          web:
+            enabled: true
+            port: 80
+            protocol: http
+            redirectTo: websecure
+          websecure:
+            enabled: true
+            port: 443
+            protocol: https
+            # -- Configure (Forwarded Headers)[https://doc.traefik.io/traefik/routing/entrypoints/#forwarded-headers] Support
+            forwardedHeaders:
+              enabled: false
+              # -- List of trusted IP and CIDR references
+              trustedIPs: []
+              # -- Trust all forwarded headers
+              insecureMode: false
+            # -- Configure (Proxy Protocol Headers)[https://doc.traefik.io/traefik/routing/entrypoints/#proxyprotocol] Support
+            proxyProtocol:
+              enabled: false
+              # -- Only IPs in trustedIPs will lead to remote client address replacement
+              trustedIPs: []
+              # -- Trust every incoming connection
+              insecureMode: false
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: ""
+        hosts:
+          - host: traefik.${DOMAIN_2}
+            paths:
+              - path: /
+                pathType: Prefix
+        integrations:
+          traefik:
+            enabled: true
+            middlewares:
+              - name: local
+                namespace: traefik
+              - name: traefik-dash
+                namespace: traefik
+          certManager:
+            enabled: true
+            certificateIssuer: general-le-prod  
+          homepage:
+            enabled: true
+            group: "Networking"
+
+    middlewares:
+      #ipWhiteList:
+        #- name: local
+          #sourceRange:
+            #- 172.16.0.0/16
+      redirectRegex:
+        - name: traefik-dash
+          regex: https://traefik\.${DOMAIN_2}/?$
+          replacement: https://traefik.${DOMAIN_2}/dashboard/#/
+          permanent: true
+        - name: kubernetes-dash
+          regex: https://dashboard\.${DOMAIN_2}?$
+          replacement: https://dashboard.${DOMAIN_2}/#/workloads?namespace=_all
+          permanent: true

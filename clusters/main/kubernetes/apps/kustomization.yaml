@@ -5,3 +5,4 @@ resources:
   - jellyfin/ks.yaml
   - openspeedtest/ks.yaml
   
+  - cloudflared/ks.yaml
