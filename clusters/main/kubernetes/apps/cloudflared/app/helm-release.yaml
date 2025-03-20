@@ -34,4 +34,4 @@ spec:
           containers:
             main:
               env:
-                TUNNEL_TOKEN: "${DOMAIN_0_CLOUDFLARE_TKN}"
+                TUNNEL_TOKEN: "${DOMAIN_0_CLOUDFLARE_TOKEN}"
