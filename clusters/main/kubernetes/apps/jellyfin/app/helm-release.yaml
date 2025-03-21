@@ -16,10 +16,6 @@ spec:
       interval: 5m
   timeout: 20m
   values:
-    jellyfin:
-      serverIP: ${JELLYFIN_IP}
-      disableGDM: true
-      requireHTTPS: false
     service:
       main:
         type: LoadBalancer
@@ -37,7 +33,7 @@ spec:
     ingress:
       main:
         enabled: true
-        ingressClassName: # "external"
+        ingressClassName: internal
         hosts:
           - host: jf.${DOMAIN_0}
             paths:
@@ -45,8 +41,6 @@ spec:
                 pathType: Prefix
         integrations:
           traefik:
-            enabled: true
-          homepage:
             enabled: true
           certManager:
             enabled: true
