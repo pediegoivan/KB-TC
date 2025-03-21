@@ -44,10 +44,9 @@ spec:
         integrations:
           traefik:
             enabled: true
-        tls:
-          - hosts:
-              - tk.${DOMAIN_0}
-            clusterIssuer: domain-0-wildcard
+          certManager:
+            enabled: true
+            certificateIssuer: domain-0-le-prod
         hosts:
           - host: tk.${DOMAIN_0}
             paths:
