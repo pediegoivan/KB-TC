@@ -16,6 +16,10 @@ spec:
       interval: 5m
   timeout: 20m
   values:
+    jellyfin:
+      serverIP: ${JELLYFIN_IP}
+      disableGDM: true
+      requireHTTPS: false
     service:
       main:
         type: LoadBalancer
@@ -36,9 +40,12 @@ spec:
         integrations:
           traefik:
             enabled: true
+          #homepage:
+            #enabled: true
         tls:
-          hosts: jf.${DOMAIN_0}
-          clusterIssuer: domain-0-wildcard
+          - hosts:
+              - jf.${DOMAIN_0}
+            clusterIssuer: domain-0-wildcard
         hosts:
           - host: jf.${DOMAIN_0}
             paths:
