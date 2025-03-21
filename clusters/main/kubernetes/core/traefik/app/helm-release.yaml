@@ -30,42 +30,22 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    deployment:
-      enabled: 2
+    global:
+      stopAll: false
     service:
-      enabled: true
-      type: LoadBalancer
-      annotations:
-        metallb.io/ip-allocated-from-pool: main
-        metallb.io/loadBalancerIPs: ${TRAEFIK_IP}
-        metallb.universe.tf/ip-allocated-from-pool: main
-      spec:
+      tcp:
+        loadBalancerIP: ${TRAEFIK_IP}
         externalTrafficPolicy: Local
-    ingressClass:
-      enabled: true
-      isDefaultClass: true
-    tlsOptions:
-      default:
-        minVersion: VersionTLS12
-        maxVersion: VersionTLS13
-        sniStrict: true
-    providers:
-      kubernetesCRD:
-        enabled: true
-        allowCrossNamespace: true
-        allowExternalNameServices: true    
-    ports:
-      traefik:
-        expose:
-          default: true
-      web:
-        redirections:
-          port: websecure
-      websecure:
-        tls:
-          enabled: true
-          options: "default"
-
+        ports:
+          web:
+            enabled: true
+            port: 80
+            protocol: http
+            redirectTo: websecure
+          websecure:
+            enabled: true
+            port: 443
+            protocol: https
     ingress:
       main:
         enabled: true
