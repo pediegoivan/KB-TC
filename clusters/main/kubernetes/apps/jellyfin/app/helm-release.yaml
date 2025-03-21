@@ -17,7 +17,7 @@ spec:
   timeout: 20m
   values:
     jellyfin:
-      serverIP: 192.168.0.16
+      serverIP: ${JELLYFIN_IP}
       disableGDM: true
       requireHTTPS: false
     service:
