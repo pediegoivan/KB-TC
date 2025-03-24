@@ -30,8 +30,8 @@ spec:
     keepHistory: false
   values:
     clusterIssuer:
-      #selfSigned:
-      #  enabled: true
+      selfSigned:
+        enabled: true
       #  name: "selfsigned"
       ## Remove these if you do NOT want to use clusterissuer
       ACME:
