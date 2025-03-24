@@ -44,7 +44,7 @@ spec:
             enabled: true
             certificateIssuer: domain-0-le-prod
         hosts:
-          - host: jf.${DOMAIN_0}
+          - host: j.${DOMAIN_0}
             paths:
               - path: /
                 pathType: Prefix
