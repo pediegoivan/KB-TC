@@ -32,7 +32,7 @@ spec:
     clusterIssuer:
       selfSigned:
         enabled: true
-      #  name: "selfsigned"
+        name: "selfsigned"
       ## Remove these if you do NOT want to use clusterissuer
       ACME:
         - name: domain-0-le-prod
