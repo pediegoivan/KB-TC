@@ -35,7 +35,18 @@ spec:
     global:
       stopAll: false
     service:
-      loadBalancerIP: ${TRAEFIK_IP}
+      tcp:
+        loadBalancerIP: ${TRAEFIK_IP}
+        ports:
+          web:
+            enabled: true
+            port: 80
+            protocol: http
+            redirectTo: websecure
+          websecure:
+            enabled: true
+            port: 443
+            protocol: https
     #ingress:
     #  main:
     #    enabled: true
