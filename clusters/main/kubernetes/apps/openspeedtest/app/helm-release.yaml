@@ -42,3 +42,22 @@ spec:
         runAsNonRoot: false
         runAsUser: 0
         runAsGroup: 0
+    ingress:
+      main:
+        enabled: true
+        integrations:
+          traefik:
+            enabled: true
+          middleware-name:
+            data:
+              users:
+                - username: ${BASIC_AUTH_USER}
+                  password: ${BASIC_AUTH_PASS}
+          certManager:
+            enabled: true
+            certificateIssuer: domain-0-le-prod
+        hosts:
+          - host: sp.${DOMAIN_0}
+            paths:
+              - path: /
+                pathType: Prefix
