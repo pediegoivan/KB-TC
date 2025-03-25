@@ -44,17 +44,16 @@ spec:
         runAsGroup: 0
     ingress:
       main:
-        enabled: true
+        enabled: false
         integrations:
           traefik:
             enabled: true
-            middlewares:
-              - name: midBasicAuth
-              - type: basic-auth
-              - data:
-                  users:
-                    - username: ${BASIC_AUTH_USER}
-                      password: ${BASIC_AUTH_PASS}
+            #middleware-BasicAuth:
+            #  - type: basic-auth
+            #    data:
+            #      users:
+            #        - username: ${BASIC_AUTH_USER}
+            #          password: ${BASIC_AUTH_PASS}
           certManager:
             enabled: true
             certificateIssuer: domain-0-le-prod
