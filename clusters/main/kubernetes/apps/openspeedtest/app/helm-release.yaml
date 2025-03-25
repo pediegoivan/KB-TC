@@ -48,7 +48,9 @@ spec:
         integrations:
           traefik:
             enabled: true
-          middleware-name:
+          middleware-BasAuth:
+            enabled: true
+            type: basic-auth
             data:
               users:
                 - username: ${BASIC_AUTH_USER}
