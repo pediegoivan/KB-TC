@@ -48,14 +48,13 @@ spec:
         integrations:
           traefik:
             enabled: true
-          middlewares:
-            enabled: true
-            type: basic-auth
-            name: middlewareBasicAuth
-            data:
-              users:
-                - username: ${BASIC_AUTH_USER}
-                  password: ${BASIC_AUTH_PASS}
+            middleware-BasAuth:
+              enabled: true
+              type: basic-auth
+              data:
+                users:
+                  - username: ${BASIC_AUTH_USER}
+                    password: ${BASIC_AUTH_PASS}
           certManager:
             enabled: true
             certificateIssuer: domain-0-le-prod
